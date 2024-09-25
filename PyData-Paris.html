@@ -425,7 +425,7 @@ Alonso Silva (twitter/X: <span class="citation" data-cites="alonsosilva">@alonso
 </section>
 <section id="data" class="slide level2">
 <h2>Data</h2>
-<div id="4bdb8335-e220-4428-bce7-92f72ff706df" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-09-25T06:59:46.455029Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-09-25T06:59:46.454661Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-09-25T06:59:52.516569Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-09-25T06:59:52.514931Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2024-09-25T06:59:46.454994Z&quot;}" data-execution_count="2">
+<div id="4bdb8335-e220-4428-bce7-92f72ff706df" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-09-25T08:03:32.049404Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-09-25T08:03:32.049058Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-09-25T08:03:34.966649Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-09-25T08:03:34.965018Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2024-09-25T08:03:32.049371Z&quot;}" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href=""></a><span class="im">import</span> polars <span class="im">as</span> pl</span>
 <span id="cb1-2"><a href=""></a><span class="im">import</span> string</span>
 <span id="cb1-3"><a href=""></a></span>
@@ -503,7 +503,7 @@ Alonso Silva (twitter/X: <span class="citation" data-cites="alonsosilva">@alonso
 </section>
 <section id="potential-kind-of-queries" class="slide level2">
 <h2>Potential kind of queries</h2>
-<div id="acfa768a-b9cd-4ac8-8d4e-c033c3772f0e" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-09-25T06:59:52.527757Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-09-25T06:59:52.527256Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-09-25T06:59:52.549916Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-09-25T06:59:52.548718Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2024-09-25T06:59:52.527708Z&quot;}" data-execution_count="4">
+<div id="acfa768a-b9cd-4ac8-8d4e-c033c3772f0e" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-09-25T08:03:34.977834Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-09-25T08:03:34.977158Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-09-25T08:03:35.001452Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-09-25T08:03:34.999921Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2024-09-25T08:03:34.977782Z&quot;}" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href=""></a>queries <span class="op">=</span> [</span>
 <span id="cb2-2"><a href=""></a>    <span class="st">"Which song is about a boy who is having nightmares?"</span>,</span>
 <span id="cb2-3"><a href=""></a>    <span class="st">"Which song is about a guy who is so badly wounded in war so he no longer has any senses?"</span>,</span>
@@ -519,7 +519,7 @@ Alonso Silva (twitter/X: <span class="citation" data-cites="alonsosilva">@alonso
 </section>
 <section id="vector-only-retrieval-1" class="slide level2">
 <h2>Vector-only retrieval</h2>
-<div id="221e6fc8-dc12-4dc9-a52c-011b605b4819" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-09-25T06:59:52.573021Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-09-25T06:59:52.572527Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-09-25T06:59:52.590665Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-09-25T06:59:52.589523Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2024-09-25T06:59:52.572975Z&quot;}" data-execution_count="6">
+<div id="221e6fc8-dc12-4dc9-a52c-011b605b4819" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-09-25T08:03:35.024416Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-09-25T08:03:35.023736Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-09-25T08:03:35.048116Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-09-25T08:03:35.046893Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2024-09-25T08:03:35.024366Z&quot;}" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href=""></a>df <span class="op">=</span> df.with_columns(</span>
 <span id="cb3-2"><a href=""></a>    text<span class="op">=</span>pl.lit(<span class="st">"# "</span>)</span>
 <span id="cb3-3"><a href=""></a>    <span class="op">+</span> pl.col(<span class="st">"Album"</span>)</span>
@@ -600,7 +600,7 @@ Alonso Silva (twitter/X: <span class="citation" data-cites="alonsosilva">@alonso
 </section>
 <section id="vector-only-retrieval-2" class="slide level2">
 <h2>Vector-only retrieval</h2>
-<div id="bfb78d4e-952c-4451-8f1c-7715e68e28d2" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-09-25T06:59:52.592783Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-09-25T06:59:52.592307Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-09-25T06:59:52.603746Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-09-25T06:59:52.602258Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2024-09-25T06:59:52.592737Z&quot;}" data-execution_count="7">
+<div id="bfb78d4e-952c-4451-8f1c-7715e68e28d2" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-09-25T08:03:35.050271Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-09-25T08:03:35.049772Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-09-25T08:03:35.061878Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-09-25T08:03:35.060128Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2024-09-25T08:03:35.050228Z&quot;}" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href=""></a><span class="bu">print</span>(df.select(<span class="st">"text"</span>)[<span class="dv">1</span>].item()[:<span class="dv">300</span>])</span>
 <span id="cb4-2"><a href=""></a><span class="bu">print</span>(<span class="st">"..."</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -622,7 +622,7 @@ trust I seek and I find
 </section>
 <section id="vector-only-retrieval-3" class="slide level2">
 <h2>Vector-only retrieval</h2>
-<div id="879c6d5e-87d5-485c-86c1-026206ac275f" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-09-25T06:59:52.606333Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-09-25T06:59:52.605382Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-09-25T06:59:53.159067Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-09-25T06:59:53.157792Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2024-09-25T06:59:52.606281Z&quot;}" data-execution_count="8">
+<div id="879c6d5e-87d5-485c-86c1-026206ac275f" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-09-25T08:03:35.064350Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-09-25T08:03:35.063682Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-09-25T08:03:35.613449Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-09-25T08:03:35.612678Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2024-09-25T08:03:35.064301Z&quot;}" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href=""></a><span class="im">import</span> shutil</span>
 <span id="cb6-2"><a href=""></a><span class="im">import</span> lancedb</span>
 <span id="cb6-3"><a href=""></a></span>
@@ -632,7 +632,7 @@ trust I seek and I find
 </section>
 <section id="vector-only-retrieval-4" class="slide level2">
 <h2>Vector-only retrieval</h2>
-<div id="db1bb40f-fe45-458a-a18b-74ed3e4f8e49" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-09-25T06:59:53.160014Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-09-25T06:59:53.159788Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-09-25T06:59:53.163717Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-09-25T06:59:53.162985Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2024-09-25T06:59:53.159996Z&quot;}" data-execution_count="9">
+<div id="db1bb40f-fe45-458a-a18b-74ed3e4f8e49" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-09-25T08:03:35.614359Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-09-25T08:03:35.614138Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-09-25T08:03:35.618356Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-09-25T08:03:35.617563Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2024-09-25T08:03:35.614343Z&quot;}" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href=""></a><span class="im">from</span> lancedb.embeddings <span class="im">import</span> get_registry</span>
 <span id="cb7-2"><a href=""></a></span>
 <span id="cb7-3"><a href=""></a>embeddings <span class="op">=</span> (</span>
@@ -644,7 +644,7 @@ trust I seek and I find
 </section>
 <section id="vector-only-retrieval-5" class="slide level2">
 <h2>Vector-only retrieval</h2>
-<div id="784ad2ce-d0b4-4154-9b21-25873d7fbb31" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-09-25T06:59:53.165833Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-09-25T06:59:53.165078Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-09-25T06:59:59.920995Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-09-25T06:59:59.919715Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2024-09-25T06:59:53.165774Z&quot;}" data-execution_count="10">
+<div id="784ad2ce-d0b4-4154-9b21-25873d7fbb31" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-09-25T08:03:35.618990Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-09-25T08:03:35.618854Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-09-25T08:03:40.227027Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-09-25T08:03:40.225623Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2024-09-25T08:03:35.618976Z&quot;}" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href=""></a><span class="im">from</span> lancedb.pydantic <span class="im">import</span> LanceModel, Vector</span>
 <span id="cb8-2"><a href=""></a></span>
 <span id="cb8-3"><a href=""></a><span class="kw">class</span> Songs(LanceModel):</span>
@@ -658,17 +658,126 @@ trust I seek and I find
 </section>
 <section id="vector-only-retrieval-6" class="slide level2">
 <h2>Vector-only retrieval</h2>
-<div id="65f3f267-7290-4f2b-a493-f901e371e062" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-09-25T06:59:59.922053Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-09-25T06:59:59.921731Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-09-25T07:00:00.252792Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-09-25T07:00:00.251609Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2024-09-25T06:59:59.922034Z&quot;}" data-execution_count="11">
+<div id="65f3f267-7290-4f2b-a493-f901e371e062" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-09-25T08:03:40.228219Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-09-25T08:03:40.227895Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-09-25T08:03:40.572664Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-09-25T08:03:40.572076Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2024-09-25T08:03:40.228202Z&quot;}" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href=""></a>table <span class="op">=</span> db.create_table(<span class="st">"Songs"</span>, schema<span class="op">=</span>Songs)</span>
 <span id="cb9-2"><a href=""></a>table.add(data<span class="op">=</span>df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="vector-only-retrieval-7" class="slide level2">
 <h2>Vector-only retrieval</h2>
-<div id="22439836-efdf-4614-b8c9-9ada9faeaa4c" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-09-25T07:00:00.260782Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-09-25T07:00:00.260481Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-09-25T07:00:00.314710Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-09-25T07:00:00.313387Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2024-09-25T07:00:00.260752Z&quot;}" data-execution_count="13">
+<div id="55050e05-5fd3-48fe-a523-68208e49411e" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-09-25T08:04:18.781681Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-09-25T08:04:18.780958Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-09-25T08:04:18.813297Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-09-25T08:04:18.812354Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2024-09-25T08:04:18.781625Z&quot;}" data-execution_count="16">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href=""></a>query <span class="op">=</span> <span class="st">"Which song is about a boy who is having nightmares?"</span></span>
 <span id="cb10-2"><a href=""></a>results <span class="op">=</span> table.search(query).limit(<span class="dv">10</span>).to_polars()</span>
-<span id="cb10-3"><a href=""></a>results[<span class="st">"Song"</span>].to_list()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb10-3"><a href=""></a>results.select([<span class="st">"Song"</span>,<span class="st">"Album"</span>, <span class="st">"_distance"</span>, <span class="st">"Lyrics"</span>, <span class="st">"vector"</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="16">
+<div><style>
+.dataframe > thead > tr,
+.dataframe > tbody > tr {
+  text-align: right;
+  white-space: pre-wrap;
+}
+</style>
+<small>shape: (10, 5)</small>
+<table class="dataframe" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th">Song</th>
+<th data-quarto-table-cell-role="th">Album</th>
+<th data-quarto-table-cell-role="th">_distance</th>
+<th data-quarto-table-cell-role="th">Lyrics</th>
+<th data-quarto-table-cell-role="th">vector</th>
+</tr>
+<tr class="odd">
+<th>str</th>
+<th>str</th>
+<th>f32</th>
+<th>str</th>
+<th>array[f32, 384]</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>"Enter Sandman"</td>
+<td>"The Black Album"</td>
+<td>0.228461</td>
+<td>"Say your prayers little one do…</td>
+<td>[-0.019242, 0.004355, … 0.019346]</td>
+</tr>
+<tr class="even">
+<td>"The Thing That Should Not Be"</td>
+<td>"S&amp;m"</td>
+<td>0.229785</td>
+<td>"Messenger of fear in sight Dar…</td>
+<td>[-0.0343, -0.004135, … 0.017745]</td>
+</tr>
+<tr class="odd">
+<td>"Hero Of The Day"</td>
+<td>"S&amp;m"</td>
+<td>0.233728</td>
+<td>"Mama they try and break me The…</td>
+<td>[-0.06035, 0.001112, … 0.052594]</td>
+</tr>
+<tr class="even">
+<td>"The Thing That Should Not Be"</td>
+<td>"Master Of Puppets"</td>
+<td>0.241206</td>
+<td>"Messenger of fear in sight Dar…</td>
+<td>[-0.039418, 0.001882, … 0.016381]</td>
+</tr>
+<tr class="odd">
+<td>"Hero Of The Day"</td>
+<td>"Load"</td>
+<td>0.245303</td>
+<td>"Mama they try and break me The…</td>
+<td>[-0.07442, -0.000922, … 0.047706]</td>
+</tr>
+<tr class="even">
+<td>"Invisible Kid"</td>
+<td>"St. Anger"</td>
+<td>0.2473</td>
+<td>"Invisible Kid Never see what h…</td>
+<td>[-0.033447, -0.034929, … 0.047731]</td>
+</tr>
+<tr class="odd">
+<td>"Enter Sandman"</td>
+<td>"S&amp;m"</td>
+<td>0.250452</td>
+<td>"Let loose man! Say your prayer…</td>
+<td>[-0.024093, 0.032401, … 0.021124]</td>
+</tr>
+<tr class="even">
+<td>"Sad But True"</td>
+<td>"S&amp;m"</td>
+<td>0.250919</td>
+<td>"Hey, hey, hey, hey, hey, hey, …</td>
+<td>[-0.046668, -0.00912, … 0.024796]</td>
+</tr>
+<tr class="odd">
+<td>"My Friend Of Misery"</td>
+<td>"The Black Album"</td>
+<td>0.253463</td>
+<td>"You just stood there screaming…</td>
+<td>[-0.0754, -0.001582, … 0.026701]</td>
+</tr>
+<tr class="even">
+<td>"One"</td>
+<td>"S&amp;m"</td>
+<td>0.253472</td>
+<td>"I can't remember anything Can'…</td>
+<td>[-0.055845, -0.000173, … 0.016305]</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section id="vector-only-retrieval-8" class="slide level2">
+<h2>Vector-only retrieval</h2>
+<div id="22439836-efdf-4614-b8c9-9ada9faeaa4c" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-09-25T07:00:00.260782Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-09-25T07:00:00.260481Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-09-25T07:00:00.314710Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-09-25T07:00:00.313387Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2024-09-25T07:00:00.260752Z&quot;}" data-execution_count="13">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href=""></a>query <span class="op">=</span> <span class="st">"Which song is about a boy who is having nightmares?"</span></span>
+<span id="cb11-2"><a href=""></a>results <span class="op">=</span> table.search(query).limit(<span class="dv">10</span>).to_polars()</span>
+<span id="cb11-3"><a href=""></a>results[<span class="st">"Song"</span>].to_list()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="13">
 <pre><code>['Enter Sandman',
  'The Thing That Should Not Be',
@@ -683,12 +792,12 @@ trust I seek and I find
 </div>
 </div>
 </section>
-<section id="vector-only-retrieval-8" class="slide level2">
+<section id="vector-only-retrieval-9" class="slide level2">
 <h2>Vector-only retrieval</h2>
 <div id="29d9ec00-689e-4c5b-b43b-3f24523e2285" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-09-25T07:00:00.315864Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-09-25T07:00:00.315612Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-09-25T07:00:00.338066Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-09-25T07:00:00.336740Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2024-09-25T07:00:00.315841Z&quot;}" data-execution_count="14">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href=""></a>query <span class="op">=</span> <span class="st">"Which song is about a guy who is so badly wounded in war so he no longer has any senses?"</span></span>
-<span id="cb12-2"><a href=""></a>results <span class="op">=</span> table.search(query).limit(<span class="dv">10</span>).to_polars()</span>
-<span id="cb12-3"><a href=""></a>results[<span class="st">"Song"</span>].to_list()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href=""></a>query <span class="op">=</span> <span class="st">"Which song is about a guy who is so badly wounded in war so he no longer has any senses?"</span></span>
+<span id="cb13-2"><a href=""></a>results <span class="op">=</span> table.search(query).limit(<span class="dv">10</span>).to_polars()</span>
+<span id="cb13-3"><a href=""></a>results[<span class="st">"Song"</span>].to_list()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="14">
 <pre><code>['Phantom Lord',
  'One',
@@ -703,7 +812,7 @@ trust I seek and I find
 </div>
 </div>
 </section>
-<section id="vector-only-retrieval-9" class="slide level2">
+<section id="vector-only-retrieval-10" class="slide level2">
 <h2>Vector-only retrieval</h2>
 <p><a href="https://alonsosilva-song-finder.hf.space">https://alonsosilva-song-finder.hf.space</a></p>
 <div id="2ebd3acb-cd8e-499a-9ccf-1706eb4e9e7f" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-09-25T07:00:00.340375Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-09-25T07:00:00.339673Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-09-25T07:00:00.347586Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-09-25T07:00:00.346515Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2024-09-25T07:00:00.340322Z&quot;}" data-execution_count="15">
@@ -717,32 +826,32 @@ trust I seek and I find
 <section id="retrieval-augmented-generation-rag" class="slide level2">
 <h2>Retrieval Augmented Generation (RAG)</h2>
 <div id="dca44d07-01dd-4e95-bfc6-3de7f3594929" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-09-25T07:00:00.349526Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-09-25T07:00:00.349057Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-09-25T07:00:02.755246Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-09-25T07:00:02.754670Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2024-09-25T07:00:00.349480Z&quot;}" data-execution_count="16">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href=""></a><span class="im">import</span> llama_cpp</span>
-<span id="cb14-2"><a href=""></a></span>
-<span id="cb14-3"><a href=""></a>llm <span class="op">=</span> llama_cpp.Llama(</span>
-<span id="cb14-4"><a href=""></a>    <span class="st">"/big_storage/llms/models/Hermes-3-Llama-3.1-8B.Q6_K.gguf"</span>,</span>
-<span id="cb14-5"><a href=""></a>    tokenizer<span class="op">=</span>llama_cpp.llama_tokenizer.LlamaHFTokenizer.from_pretrained(</span>
-<span id="cb14-6"><a href=""></a>        <span class="st">"NousResearch/Hermes-3-Llama-3.1-8B"</span></span>
-<span id="cb14-7"><a href=""></a>    ),</span>
-<span id="cb14-8"><a href=""></a>    n_gpu_layers<span class="op">=-</span><span class="dv">1</span>,</span>
-<span id="cb14-9"><a href=""></a>    flash_attn<span class="op">=</span><span class="va">True</span>,</span>
-<span id="cb14-10"><a href=""></a>    n_ctx<span class="op">=</span><span class="dv">8192</span>,</span>
-<span id="cb14-11"><a href=""></a>    verbose<span class="op">=</span><span class="va">False</span>,</span>
-<span id="cb14-12"><a href=""></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href=""></a><span class="im">import</span> llama_cpp</span>
+<span id="cb15-2"><a href=""></a></span>
+<span id="cb15-3"><a href=""></a>llm <span class="op">=</span> llama_cpp.Llama(</span>
+<span id="cb15-4"><a href=""></a>    <span class="st">"/big_storage/llms/models/Hermes-3-Llama-3.1-8B.Q6_K.gguf"</span>,</span>
+<span id="cb15-5"><a href=""></a>    tokenizer<span class="op">=</span>llama_cpp.llama_tokenizer.LlamaHFTokenizer.from_pretrained(</span>
+<span id="cb15-6"><a href=""></a>        <span class="st">"NousResearch/Hermes-3-Llama-3.1-8B"</span></span>
+<span id="cb15-7"><a href=""></a>    ),</span>
+<span id="cb15-8"><a href=""></a>    n_gpu_layers<span class="op">=-</span><span class="dv">1</span>,</span>
+<span id="cb15-9"><a href=""></a>    flash_attn<span class="op">=</span><span class="va">True</span>,</span>
+<span id="cb15-10"><a href=""></a>    n_ctx<span class="op">=</span><span class="dv">8192</span>,</span>
+<span id="cb15-11"><a href=""></a>    verbose<span class="op">=</span><span class="va">False</span>,</span>
+<span id="cb15-12"><a href=""></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="retrieval-augmented-generation-rag-1" class="slide level2">
 <h2>Retrieval Augmented Generation (RAG)</h2>
 <div id="ff3f76e0-691a-49a0-bcb2-88e529a9feb5" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-09-25T07:00:02.756290Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-09-25T07:00:02.755955Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-09-25T07:00:02.770970Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-09-25T07:00:02.769993Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2024-09-25T07:00:02.756270Z&quot;}" data-scrolled="true" data-execution_count="17">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href=""></a><span class="kw">def</span> get_relevant_texts(query):</span>
-<span id="cb15-2"><a href=""></a>    results <span class="op">=</span> (</span>
-<span id="cb15-3"><a href=""></a>        table.search(query)</span>
-<span id="cb15-4"><a href=""></a>             .limit(<span class="dv">5</span>)</span>
-<span id="cb15-5"><a href=""></a>             .to_polars()</span>
-<span id="cb15-6"><a href=""></a>    )</span>
-<span id="cb15-7"><a href=""></a>    <span class="cf">return</span> <span class="st">" "</span>.join([results[<span class="st">"text"</span>][i] <span class="op">+</span> <span class="st">"</span><span class="ch">\n\n</span><span class="st">---</span><span class="ch">\n\n</span><span class="st">"</span> <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">5</span>)])</span>
-<span id="cb15-8"><a href=""></a></span>
-<span id="cb15-9"><a href=""></a><span class="bu">print</span>(get_relevant_texts(query))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href=""></a><span class="kw">def</span> get_relevant_texts(query):</span>
+<span id="cb16-2"><a href=""></a>    results <span class="op">=</span> (</span>
+<span id="cb16-3"><a href=""></a>        table.search(query)</span>
+<span id="cb16-4"><a href=""></a>             .limit(<span class="dv">5</span>)</span>
+<span id="cb16-5"><a href=""></a>             .to_polars()</span>
+<span id="cb16-6"><a href=""></a>    )</span>
+<span id="cb16-7"><a href=""></a>    <span class="cf">return</span> <span class="st">" "</span>.join([results[<span class="st">"text"</span>][i] <span class="op">+</span> <span class="st">"</span><span class="ch">\n\n</span><span class="st">---</span><span class="ch">\n\n</span><span class="st">"</span> <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">5</span>)])</span>
+<span id="cb16-8"><a href=""></a></span>
+<span id="cb16-9"><a href=""></a><span class="bu">print</span>(get_relevant_texts(query))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># Kill 'em All: Phantom Lord
 
@@ -989,15 +1098,15 @@ my friend of misery
 <section id="retrieval-augmented-generation-rag-2" class="slide level2">
 <h2>Retrieval Augmented Generation (RAG)</h2>
 <div id="548bbd82-4d11-475f-b3f9-afee31a50e13" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-09-25T07:00:02.773107Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-09-25T07:00:02.772326Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-09-25T07:00:02.804947Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-09-25T07:00:02.803741Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2024-09-25T07:00:02.773058Z&quot;}" data-scrolled="true" data-execution_count="18">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href=""></a><span class="kw">def</span> generate_prompt(query):</span>
-<span id="cb17-2"><a href=""></a>    <span class="cf">return</span> (</span>
-<span id="cb17-3"><a href=""></a>        <span class="st">"Answer the question based only on the following context:</span><span class="ch">\n\n</span><span class="st">"</span></span>
-<span id="cb17-4"><a href=""></a>        <span class="op">+</span> get_relevant_texts(query)</span>
-<span id="cb17-5"><a href=""></a>        <span class="op">+</span> <span class="st">"</span><span class="ch">\n\n</span><span class="st">Question: "</span></span>
-<span id="cb17-6"><a href=""></a>        <span class="op">+</span> query</span>
-<span id="cb17-7"><a href=""></a>    )</span>
-<span id="cb17-8"><a href=""></a></span>
-<span id="cb17-9"><a href=""></a><span class="bu">print</span>(generate_prompt(query))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href=""></a><span class="kw">def</span> generate_prompt(query):</span>
+<span id="cb18-2"><a href=""></a>    <span class="cf">return</span> (</span>
+<span id="cb18-3"><a href=""></a>        <span class="st">"Answer the question based only on the following context:</span><span class="ch">\n\n</span><span class="st">"</span></span>
+<span id="cb18-4"><a href=""></a>        <span class="op">+</span> get_relevant_texts(query)</span>
+<span id="cb18-5"><a href=""></a>        <span class="op">+</span> <span class="st">"</span><span class="ch">\n\n</span><span class="st">Question: "</span></span>
+<span id="cb18-6"><a href=""></a>        <span class="op">+</span> query</span>
+<span id="cb18-7"><a href=""></a>    )</span>
+<span id="cb18-8"><a href=""></a></span>
+<span id="cb18-9"><a href=""></a><span class="bu">print</span>(generate_prompt(query))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Answer the question based only on the following context:
 
@@ -1248,21 +1357,21 @@ Question: Which song is about a guy who is so badly wounded in war so he no long
 <section id="retrieval-augmented-generation-rag-3" class="slide level2">
 <h2>Retrieval Augmented Generation (RAG)</h2>
 <div id="4eba26ab-13a7-493c-b3a2-6928faf5431b" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-09-25T07:00:02.807065Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-09-25T07:00:02.806472Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-09-25T07:00:02.813971Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-09-25T07:00:02.812705Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2024-09-25T07:00:02.807017Z&quot;}" data-execution_count="19">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href=""></a><span class="kw">def</span> generate_response(query):</span>
-<span id="cb19-2"><a href=""></a>    prompt <span class="op">=</span> generate_prompt(query)</span>
-<span id="cb19-3"><a href=""></a>    response <span class="op">=</span> llm.create_chat_completion(</span>
-<span id="cb19-4"><a href=""></a>        messages<span class="op">=</span>[{<span class="st">"role"</span>: <span class="st">"user"</span>, <span class="st">"content"</span>: prompt}], </span>
-<span id="cb19-5"><a href=""></a>        temperature<span class="op">=</span><span class="dv">0</span>,</span>
-<span id="cb19-6"><a href=""></a>        seed<span class="op">=</span><span class="dv">42</span></span>
-<span id="cb19-7"><a href=""></a>    )</span>
-<span id="cb19-8"><a href=""></a>    <span class="cf">return</span> response[<span class="st">"choices"</span>][<span class="dv">0</span>][<span class="st">"message"</span>][<span class="st">"content"</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href=""></a><span class="kw">def</span> generate_response(query):</span>
+<span id="cb20-2"><a href=""></a>    prompt <span class="op">=</span> generate_prompt(query)</span>
+<span id="cb20-3"><a href=""></a>    response <span class="op">=</span> llm.create_chat_completion(</span>
+<span id="cb20-4"><a href=""></a>        messages<span class="op">=</span>[{<span class="st">"role"</span>: <span class="st">"user"</span>, <span class="st">"content"</span>: prompt}], </span>
+<span id="cb20-5"><a href=""></a>        temperature<span class="op">=</span><span class="dv">0</span>,</span>
+<span id="cb20-6"><a href=""></a>        seed<span class="op">=</span><span class="dv">42</span></span>
+<span id="cb20-7"><a href=""></a>    )</span>
+<span id="cb20-8"><a href=""></a>    <span class="cf">return</span> response[<span class="st">"choices"</span>][<span class="dv">0</span>][<span class="st">"message"</span>][<span class="st">"content"</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="retrieval-augmented-generation-rag-4" class="slide level2">
 <h2>Retrieval Augmented Generation (RAG)</h2>
 <div id="a86366f6-741a-4542-9de3-1f4d43065ad3" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-09-25T07:00:02.816197Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-09-25T07:00:02.815610Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-09-25T07:00:05.359370Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-09-25T07:00:05.358576Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2024-09-25T07:00:02.816148Z&quot;}" data-execution_count="20">
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href=""></a>query <span class="op">=</span> <span class="st">"Which song is about a guy who is so badly wounded in war so he no longer has any senses?"</span></span>
-<span id="cb20-2"><a href=""></a><span class="bu">print</span>(generate_response(query))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href=""></a>query <span class="op">=</span> <span class="st">"Which song is about a guy who is so badly wounded in war so he no longer has any senses?"</span></span>
+<span id="cb21-2"><a href=""></a><span class="bu">print</span>(generate_response(query))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>The song that is about a guy who is so badly wounded in war that he no longer has any senses is "And Justice For All..: One". The lyrics mention that the person has lost their sight, speech, hearing, arms, legs, and soul, and is left with life in hell.</code></pre>
 </div>
@@ -1271,8 +1380,8 @@ Question: Which song is about a guy who is so badly wounded in war so he no long
 <section id="retrieval-augmented-generation-rag-5" class="slide level2">
 <h2>Retrieval Augmented Generation (RAG)</h2>
 <div id="b9e95cce-6b01-4a16-8131-b494b6b5fff0" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-09-25T07:00:05.361727Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-09-25T07:00:05.361472Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-09-25T07:00:09.843450Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-09-25T07:00:09.842030Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2024-09-25T07:00:05.361710Z&quot;}" data-execution_count="21">
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href=""></a>query <span class="op">=</span> <span class="st">"Which song is about a boy who is having nightmares?"</span></span>
-<span id="cb22-2"><a href=""></a><span class="bu">print</span>(generate_response(query))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href=""></a>query <span class="op">=</span> <span class="st">"Which song is about a boy who is having nightmares?"</span></span>
+<span id="cb23-2"><a href=""></a><span class="bu">print</span>(generate_response(query))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>The song that is about a boy who is having nightmares is "The Black Album: Enter Sandman". The lyrics mention "Say your prayers little one", "tuck you in warm within", "keep you free from sin till the sandman he comes", "sleep with one eye open gripping your pillow tight", "dreams of war dreams of liars dreams of dragon's fire and of things that will bite", and "now I lay me down to sleep pray the lord my soul to keep". These lines indicate that the song is about a child having nightmares and fearing the dark.</code></pre>
 </div>
@@ -1292,8 +1401,8 @@ Question: Which song is about a guy who is so badly wounded in war so he no long
 <section id="retrieval-augmented-generation-rag-7" class="slide level2">
 <h2>Retrieval Augmented Generation (RAG)</h2>
 <div id="0dab57df-5969-4187-918c-2625c0a1fff2" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-09-25T07:00:09.855320Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-09-25T07:00:09.854594Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-09-25T07:00:12.064603Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-09-25T07:00:12.064056Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2024-09-25T07:00:09.855268Z&quot;}" data-execution_count="23">
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href=""></a>query <span class="op">=</span> <span class="st">"How many songs does the black album have?"</span></span>
-<span id="cb24-2"><a href=""></a><span class="bu">print</span>(generate_response(query))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href=""></a>query <span class="op">=</span> <span class="st">"How many songs does the black album have?"</span></span>
+<span id="cb25-2"><a href=""></a><span class="bu">print</span>(generate_response(query))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Based on the context provided, the Black Album has 5 songs:
 
@@ -1308,7 +1417,7 @@ Question: Which song is about a guy who is so badly wounded in war so he no long
 <section id="retrieval-augmented-generation-rag-8" class="slide level2">
 <h2>Retrieval Augmented Generation (RAG)</h2>
 <div id="d15afb6a-edf4-42f3-bf3c-b8b6d40c7fb2" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-09-25T07:00:12.065506Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-09-25T07:00:12.065317Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-09-25T07:00:12.069971Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-09-25T07:00:12.069551Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2024-09-25T07:00:12.065489Z&quot;}" data-execution_count="24">
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href=""></a>df.<span class="bu">filter</span>(pl.col(<span class="st">"Album"</span>) <span class="op">==</span> <span class="st">"The Black Album"</span>)[<span class="st">"Song"</span>].to_list()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href=""></a>df.<span class="bu">filter</span>(pl.col(<span class="st">"Album"</span>) <span class="op">==</span> <span class="st">"The Black Album"</span>)[<span class="st">"Song"</span>].to_list()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="24">
 <pre><code>["Don't Tread On Me",
  'Nothing Else Matters',
@@ -1333,78 +1442,78 @@ Question: Which song is about a guy who is so badly wounded in war so he no long
 <section id="graph-only-retrieval-1" class="slide level2">
 <h2>Graph-only retrieval</h2>
 <div id="69a93028-05e3-41da-86cc-236243c1eeea" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-09-25T07:00:29.471926Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-09-25T07:00:29.471224Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-09-25T07:00:29.624677Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-09-25T07:00:29.623795Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2024-09-25T07:00:29.471866Z&quot;}" data-execution_count="25">
-<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href=""></a><span class="co"># Initialize graph database</span></span>
-<span id="cb28-2"><a href=""></a><span class="im">import</span> shutil</span>
-<span id="cb28-3"><a href=""></a><span class="im">import</span> kuzu</span>
-<span id="cb28-4"><a href=""></a></span>
-<span id="cb28-5"><a href=""></a>shutil.rmtree(<span class="st">"test_kuzudb"</span>, ignore_errors<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb28-6"><a href=""></a>db <span class="op">=</span> kuzu.Database(<span class="st">"test_kuzudb"</span>)</span>
-<span id="cb28-7"><a href=""></a>conn <span class="op">=</span> kuzu.Connection(db)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href=""></a><span class="co"># Initialize graph database</span></span>
+<span id="cb29-2"><a href=""></a><span class="im">import</span> shutil</span>
+<span id="cb29-3"><a href=""></a><span class="im">import</span> kuzu</span>
+<span id="cb29-4"><a href=""></a></span>
+<span id="cb29-5"><a href=""></a>shutil.rmtree(<span class="st">"test_kuzudb"</span>, ignore_errors<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb29-6"><a href=""></a>db <span class="op">=</span> kuzu.Database(<span class="st">"test_kuzudb"</span>)</span>
+<span id="cb29-7"><a href=""></a>conn <span class="op">=</span> kuzu.Connection(db)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="graph-only-retrieval-2" class="slide level2">
 <h2>Graph-only retrieval</h2>
 <div id="cadab962-0b2f-4f5c-a004-d8c312ea7480" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-09-25T07:00:34.319490Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-09-25T07:00:34.318861Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-09-25T07:00:34.414884Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-09-25T07:00:34.413362Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2024-09-25T07:00:34.319435Z&quot;}" data-execution_count="26">
-<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href=""></a><span class="co"># Create schema</span></span>
-<span id="cb29-2"><a href=""></a>conn.execute(<span class="st">"CREATE NODE TABLE ARTIST(name STRING, PRIMARY KEY (name))"</span>)</span>
-<span id="cb29-3"><a href=""></a>conn.execute(<span class="st">"CREATE NODE TABLE ALBUM(name STRING, PRIMARY KEY (name))"</span>)</span>
-<span id="cb29-4"><a href=""></a>conn.execute(<span class="st">"CREATE NODE TABLE SONG(ID SERIAL, name STRING, lyrics STRING, PRIMARY KEY(ID))"</span>)</span>
-<span id="cb29-5"><a href=""></a>conn.execute(<span class="st">"CREATE REL TABLE IN_ALBUM(FROM SONG TO ALBUM)"</span>)</span>
-<span id="cb29-6"><a href=""></a>conn.execute(<span class="st">"CREATE REL TABLE FROM_ARTIST(FROM ALBUM TO ARTIST)"</span>)<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href=""></a><span class="co"># Create schema</span></span>
+<span id="cb30-2"><a href=""></a>conn.execute(<span class="st">"CREATE NODE TABLE ARTIST(name STRING, PRIMARY KEY (name))"</span>)</span>
+<span id="cb30-3"><a href=""></a>conn.execute(<span class="st">"CREATE NODE TABLE ALBUM(name STRING, PRIMARY KEY (name))"</span>)</span>
+<span id="cb30-4"><a href=""></a>conn.execute(<span class="st">"CREATE NODE TABLE SONG(ID SERIAL, name STRING, lyrics STRING, PRIMARY KEY(ID))"</span>)</span>
+<span id="cb30-5"><a href=""></a>conn.execute(<span class="st">"CREATE REL TABLE IN_ALBUM(FROM SONG TO ALBUM)"</span>)</span>
+<span id="cb30-6"><a href=""></a>conn.execute(<span class="st">"CREATE REL TABLE FROM_ARTIST(FROM ALBUM TO ARTIST)"</span>)<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="graph-only-retrieval-3" class="slide level2">
 <h2>Graph-only retrieval</h2>
 <div id="25b00787-5426-4573-838a-98dc1c5079e2" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-09-25T07:00:36.258528Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-09-25T07:00:36.257942Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-09-25T07:00:37.802105Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-09-25T07:00:37.800410Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2024-09-25T07:00:36.258474Z&quot;}" data-scrolled="true" data-execution_count="27">
-<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href=""></a><span class="co"># Insert nodes</span></span>
-<span id="cb30-2"><a href=""></a><span class="cf">for</span> artist <span class="kw">in</span> df[<span class="st">"Artist"</span>].unique():</span>
-<span id="cb30-3"><a href=""></a>    conn.execute(<span class="ss">f"CREATE (artist:ARTIST </span><span class="ch">{{</span><span class="ss">name: '</span><span class="sc">{</span>artist<span class="sc">}</span><span class="ss">'</span><span class="ch">}}</span><span class="ss">)"</span>)</span>
-<span id="cb30-4"><a href=""></a></span>
-<span id="cb30-5"><a href=""></a><span class="cf">for</span> album <span class="kw">in</span> df[<span class="st">"Album"</span>].unique():</span>
-<span id="cb30-6"><a href=""></a>    conn.execute(<span class="ss">f"""CREATE (album:ALBUM </span><span class="ch">{{</span><span class="ss">name: "</span><span class="sc">{</span>album<span class="sc">}</span><span class="ss">"</span><span class="ch">}}</span><span class="ss">)"""</span>)</span>
-<span id="cb30-7"><a href=""></a></span>
-<span id="cb30-8"><a href=""></a><span class="cf">for</span> song, lyrics <span class="kw">in</span> df.select([<span class="st">"Song"</span>, <span class="st">"text"</span>]).unique().rows():</span>
-<span id="cb30-9"><a href=""></a>    replaced_lyrics <span class="op">=</span> lyrics.replace(<span class="st">'"'</span>, <span class="st">"'"</span>)</span>
-<span id="cb30-10"><a href=""></a>    conn.execute(</span>
-<span id="cb30-11"><a href=""></a>        <span class="ss">f"""CREATE (song:SONG </span><span class="ch">{{</span><span class="ss">name: "</span><span class="sc">{</span>song<span class="sc">}</span><span class="ss">", lyrics: "</span><span class="sc">{</span>replaced_lyrics<span class="sc">}</span><span class="ss">"</span><span class="ch">}}</span><span class="ss">)"""</span></span>
-<span id="cb30-12"><a href=""></a>    )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href=""></a><span class="co"># Insert nodes</span></span>
+<span id="cb31-2"><a href=""></a><span class="cf">for</span> artist <span class="kw">in</span> df[<span class="st">"Artist"</span>].unique():</span>
+<span id="cb31-3"><a href=""></a>    conn.execute(<span class="ss">f"CREATE (artist:ARTIST </span><span class="ch">{{</span><span class="ss">name: '</span><span class="sc">{</span>artist<span class="sc">}</span><span class="ss">'</span><span class="ch">}}</span><span class="ss">)"</span>)</span>
+<span id="cb31-4"><a href=""></a></span>
+<span id="cb31-5"><a href=""></a><span class="cf">for</span> album <span class="kw">in</span> df[<span class="st">"Album"</span>].unique():</span>
+<span id="cb31-6"><a href=""></a>    conn.execute(<span class="ss">f"""CREATE (album:ALBUM </span><span class="ch">{{</span><span class="ss">name: "</span><span class="sc">{</span>album<span class="sc">}</span><span class="ss">"</span><span class="ch">}}</span><span class="ss">)"""</span>)</span>
+<span id="cb31-7"><a href=""></a></span>
+<span id="cb31-8"><a href=""></a><span class="cf">for</span> song, lyrics <span class="kw">in</span> df.select([<span class="st">"Song"</span>, <span class="st">"text"</span>]).unique().rows():</span>
+<span id="cb31-9"><a href=""></a>    replaced_lyrics <span class="op">=</span> lyrics.replace(<span class="st">'"'</span>, <span class="st">"'"</span>)</span>
+<span id="cb31-10"><a href=""></a>    conn.execute(</span>
+<span id="cb31-11"><a href=""></a>        <span class="ss">f"""CREATE (song:SONG </span><span class="ch">{{</span><span class="ss">name: "</span><span class="sc">{</span>song<span class="sc">}</span><span class="ss">", lyrics: "</span><span class="sc">{</span>replaced_lyrics<span class="sc">}</span><span class="ss">"</span><span class="ch">}}</span><span class="ss">)"""</span></span>
+<span id="cb31-12"><a href=""></a>    )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="graph-only-retrieval-4" class="slide level2">
 <h2>Graph-only retrieval</h2>
 <div id="c2d37055-54bd-44bb-ad06-8156f196954a" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-09-25T07:00:43.115165Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-09-25T07:00:43.114562Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-09-25T07:00:44.903437Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-09-25T07:00:44.901689Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2024-09-25T07:00:43.115111Z&quot;}" data-execution_count="28">
-<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href=""></a><span class="co"># Insert edges</span></span>
-<span id="cb31-2"><a href=""></a><span class="cf">for</span> song, album, lyrics <span class="kw">in</span> df.select([<span class="st">"Song"</span>, <span class="st">"Album"</span>, <span class="st">"text"</span>]).rows():</span>
-<span id="cb31-3"><a href=""></a>    replaced_lyrics <span class="op">=</span> lyrics.replace(<span class="st">'"'</span>, <span class="st">"'"</span>)</span>
-<span id="cb31-4"><a href=""></a>    conn.execute(</span>
-<span id="cb31-5"><a href=""></a>        <span class="ss">f"""</span></span>
-<span id="cb31-6"><a href=""></a><span class="ss">        MATCH (song:SONG), (album:ALBUM) </span></span>
-<span id="cb31-7"><a href=""></a><span class="ss">        WHERE song.name = "</span><span class="sc">{</span>song<span class="sc">}</span><span class="ss">" AND song.lyrics = "</span><span class="sc">{</span>replaced_lyrics<span class="sc">}</span><span class="ss">" AND album.name = "</span><span class="sc">{</span>album<span class="sc">}</span><span class="ss">"</span></span>
-<span id="cb31-8"><a href=""></a><span class="ss">        CREATE (song)-[:IN_ALBUM]-&gt;(album)</span></span>
-<span id="cb31-9"><a href=""></a><span class="ss">        """</span></span>
-<span id="cb31-10"><a href=""></a>    )</span>
-<span id="cb31-11"><a href=""></a></span>
-<span id="cb31-12"><a href=""></a><span class="cf">for</span> album, artist <span class="kw">in</span> df.select([<span class="st">"Album"</span>, <span class="st">"Artist"</span>]).unique().rows():</span>
-<span id="cb31-13"><a href=""></a>  conn.execute(</span>
-<span id="cb31-14"><a href=""></a>    <span class="ss">f"""</span></span>
-<span id="cb31-15"><a href=""></a><span class="ss">    MATCH (album:ALBUM), (artist:ARTIST) WHERE album.name = "</span><span class="sc">{</span>album<span class="sc">}</span><span class="ss">" AND artist.name = "</span><span class="sc">{</span>artist<span class="sc">}</span><span class="ss">"</span></span>
-<span id="cb31-16"><a href=""></a><span class="ss">    CREATE (album)-[:FROM_ARTIST]-&gt;(artist)</span></span>
-<span id="cb31-17"><a href=""></a><span class="ss">    """</span></span>
-<span id="cb31-18"><a href=""></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href=""></a><span class="co"># Insert edges</span></span>
+<span id="cb32-2"><a href=""></a><span class="cf">for</span> song, album, lyrics <span class="kw">in</span> df.select([<span class="st">"Song"</span>, <span class="st">"Album"</span>, <span class="st">"text"</span>]).rows():</span>
+<span id="cb32-3"><a href=""></a>    replaced_lyrics <span class="op">=</span> lyrics.replace(<span class="st">'"'</span>, <span class="st">"'"</span>)</span>
+<span id="cb32-4"><a href=""></a>    conn.execute(</span>
+<span id="cb32-5"><a href=""></a>        <span class="ss">f"""</span></span>
+<span id="cb32-6"><a href=""></a><span class="ss">        MATCH (song:SONG), (album:ALBUM) </span></span>
+<span id="cb32-7"><a href=""></a><span class="ss">        WHERE song.name = "</span><span class="sc">{</span>song<span class="sc">}</span><span class="ss">" AND song.lyrics = "</span><span class="sc">{</span>replaced_lyrics<span class="sc">}</span><span class="ss">" AND album.name = "</span><span class="sc">{</span>album<span class="sc">}</span><span class="ss">"</span></span>
+<span id="cb32-8"><a href=""></a><span class="ss">        CREATE (song)-[:IN_ALBUM]-&gt;(album)</span></span>
+<span id="cb32-9"><a href=""></a><span class="ss">        """</span></span>
+<span id="cb32-10"><a href=""></a>    )</span>
+<span id="cb32-11"><a href=""></a></span>
+<span id="cb32-12"><a href=""></a><span class="cf">for</span> album, artist <span class="kw">in</span> df.select([<span class="st">"Album"</span>, <span class="st">"Artist"</span>]).unique().rows():</span>
+<span id="cb32-13"><a href=""></a>  conn.execute(</span>
+<span id="cb32-14"><a href=""></a>    <span class="ss">f"""</span></span>
+<span id="cb32-15"><a href=""></a><span class="ss">    MATCH (album:ALBUM), (artist:ARTIST) WHERE album.name = "</span><span class="sc">{</span>album<span class="sc">}</span><span class="ss">" AND artist.name = "</span><span class="sc">{</span>artist<span class="sc">}</span><span class="ss">"</span></span>
+<span id="cb32-16"><a href=""></a><span class="ss">    CREATE (album)-[:FROM_ARTIST]-&gt;(artist)</span></span>
+<span id="cb32-17"><a href=""></a><span class="ss">    """</span></span>
+<span id="cb32-18"><a href=""></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="graph-only-retrieval-5" class="slide level2">
 <h2>Graph-only retrieval</h2>
 <div id="7f86ca78-cd9a-441b-99ae-e03fa63de250" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-09-25T07:00:48.072092Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-09-25T07:00:48.071268Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-09-25T07:00:48.105110Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-09-25T07:00:48.103349Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2024-09-25T07:00:48.072012Z&quot;}" data-execution_count="29">
-<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href=""></a>response <span class="op">=</span> conn.execute(</span>
-<span id="cb32-2"><a href=""></a>    <span class="st">"""</span></span>
-<span id="cb32-3"><a href=""></a><span class="st">    MATCH (a:ALBUM {name: 'The Black Album'})&lt;-[:IN_ALBUM]-(s:SONG) RETURN s.name</span></span>
-<span id="cb32-4"><a href=""></a><span class="st">    """</span></span>
-<span id="cb32-5"><a href=""></a>)</span>
-<span id="cb32-6"><a href=""></a></span>
-<span id="cb32-7"><a href=""></a>df_response <span class="op">=</span> response.get_as_pl()</span>
-<span id="cb32-8"><a href=""></a></span>
-<span id="cb32-9"><a href=""></a>df_response[<span class="st">"s.name"</span>].to_list()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href=""></a>response <span class="op">=</span> conn.execute(</span>
+<span id="cb33-2"><a href=""></a>    <span class="st">"""</span></span>
+<span id="cb33-3"><a href=""></a><span class="st">    MATCH (a:ALBUM {name: 'The Black Album'})&lt;-[:IN_ALBUM]-(s:SONG) RETURN s.name</span></span>
+<span id="cb33-4"><a href=""></a><span class="st">    """</span></span>
+<span id="cb33-5"><a href=""></a>)</span>
+<span id="cb33-6"><a href=""></a></span>
+<span id="cb33-7"><a href=""></a>df_response <span class="op">=</span> response.get_as_pl()</span>
+<span id="cb33-8"><a href=""></a></span>
+<span id="cb33-9"><a href=""></a>df_response[<span class="st">"s.name"</span>].to_list()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="29">
 <pre><code>['Sad But True',
  'My Friend Of Misery',
@@ -1424,8 +1533,8 @@ Question: Which song is about a guy who is so badly wounded in war so he no long
 <section id="text2cypher" class="slide level2">
 <h2>text2cypher</h2>
 <div id="7e2e25eb-1ae1-4e31-8ac3-c1a400e251fb" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-09-25T07:00:50.514091Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-09-25T07:00:50.513568Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-09-25T07:00:53.782222Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-09-25T07:00:53.780578Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2024-09-25T07:00:50.514042Z&quot;}" data-execution_count="31">
-<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href=""></a><span class="im">import</span> weave</span>
-<span id="cb34-2"><a href=""></a>weave.init(<span class="st">"pydata_paris"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href=""></a><span class="im">import</span> weave</span>
+<span id="cb35-2"><a href=""></a>weave.init(<span class="st">"pydata_paris"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Logged in as Weights &amp; Biases user: alonso-silva.
 View Weave data at https://wandb.ai/alonso-silva/pydata_paris/weave</code></pre>
@@ -1438,53 +1547,53 @@ View Weave data at https://wandb.ai/alonso-silva/pydata_paris/weave</code></pre>
 <section id="text2cypher-1" class="slide level2">
 <h2>text2cypher</h2>
 <div id="31dac59f-ac63-4171-b4e9-30b5831d2fb3" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-09-25T07:00:56.250564Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-09-25T07:00:56.249610Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-09-25T07:00:56.437991Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-09-25T07:00:56.436685Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2024-09-25T07:00:56.250505Z&quot;}" data-execution_count="32">
-<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href=""></a><span class="im">import</span> os</span>
-<span id="cb37-2"><a href=""></a><span class="im">from</span> typing <span class="im">import</span> Optional</span>
-<span id="cb37-3"><a href=""></a></span>
-<span id="cb37-4"><a href=""></a><span class="im">from</span> langchain_community.chat_models <span class="im">import</span> ChatOpenAI</span>
-<span id="cb37-5"><a href=""></a></span>
-<span id="cb37-6"><a href=""></a><span class="kw">class</span> ChatOpenRouter(ChatOpenAI):</span>
-<span id="cb37-7"><a href=""></a>    openai_api_base: <span class="bu">str</span></span>
-<span id="cb37-8"><a href=""></a>    openai_api_key: <span class="bu">str</span></span>
-<span id="cb37-9"><a href=""></a>    model_name: <span class="bu">str</span></span>
-<span id="cb37-10"><a href=""></a></span>
-<span id="cb37-11"><a href=""></a>    <span class="kw">def</span> <span class="fu">__init__</span>(</span>
-<span id="cb37-12"><a href=""></a>        <span class="va">self</span>,</span>
-<span id="cb37-13"><a href=""></a>        model_name: <span class="bu">str</span>,</span>
-<span id="cb37-14"><a href=""></a>        openai_api_key: Optional[<span class="bu">str</span>] <span class="op">=</span> <span class="va">None</span>,</span>
-<span id="cb37-15"><a href=""></a>        openai_api_base: <span class="bu">str</span> <span class="op">=</span> <span class="st">"https://openrouter.ai/api/v1"</span>,</span>
-<span id="cb37-16"><a href=""></a>        <span class="op">**</span>kwargs,</span>
-<span id="cb37-17"><a href=""></a>    ):</span>
-<span id="cb37-18"><a href=""></a>        openai_api_key <span class="op">=</span> os.getenv(<span class="st">"OPENROUTER_API_KEY"</span>)</span>
-<span id="cb37-19"><a href=""></a>        <span class="bu">super</span>().<span class="fu">__init__</span>(</span>
-<span id="cb37-20"><a href=""></a>            openai_api_base<span class="op">=</span>openai_api_base,</span>
-<span id="cb37-21"><a href=""></a>            openai_api_key<span class="op">=</span>openai_api_key,</span>
-<span id="cb37-22"><a href=""></a>            model_name<span class="op">=</span>model_name,</span>
-<span id="cb37-23"><a href=""></a>            <span class="op">**</span>kwargs,</span>
-<span id="cb37-24"><a href=""></a>        )</span>
-<span id="cb37-25"><a href=""></a></span>
-<span id="cb37-26"><a href=""></a>llm_openrouter <span class="op">=</span> ChatOpenRouter(model_name<span class="op">=</span><span class="st">"meta-llama/llama-3.1-405b-instruct"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href=""></a><span class="im">import</span> os</span>
+<span id="cb38-2"><a href=""></a><span class="im">from</span> typing <span class="im">import</span> Optional</span>
+<span id="cb38-3"><a href=""></a></span>
+<span id="cb38-4"><a href=""></a><span class="im">from</span> langchain_community.chat_models <span class="im">import</span> ChatOpenAI</span>
+<span id="cb38-5"><a href=""></a></span>
+<span id="cb38-6"><a href=""></a><span class="kw">class</span> ChatOpenRouter(ChatOpenAI):</span>
+<span id="cb38-7"><a href=""></a>    openai_api_base: <span class="bu">str</span></span>
+<span id="cb38-8"><a href=""></a>    openai_api_key: <span class="bu">str</span></span>
+<span id="cb38-9"><a href=""></a>    model_name: <span class="bu">str</span></span>
+<span id="cb38-10"><a href=""></a></span>
+<span id="cb38-11"><a href=""></a>    <span class="kw">def</span> <span class="fu">__init__</span>(</span>
+<span id="cb38-12"><a href=""></a>        <span class="va">self</span>,</span>
+<span id="cb38-13"><a href=""></a>        model_name: <span class="bu">str</span>,</span>
+<span id="cb38-14"><a href=""></a>        openai_api_key: Optional[<span class="bu">str</span>] <span class="op">=</span> <span class="va">None</span>,</span>
+<span id="cb38-15"><a href=""></a>        openai_api_base: <span class="bu">str</span> <span class="op">=</span> <span class="st">"https://openrouter.ai/api/v1"</span>,</span>
+<span id="cb38-16"><a href=""></a>        <span class="op">**</span>kwargs,</span>
+<span id="cb38-17"><a href=""></a>    ):</span>
+<span id="cb38-18"><a href=""></a>        openai_api_key <span class="op">=</span> os.getenv(<span class="st">"OPENROUTER_API_KEY"</span>)</span>
+<span id="cb38-19"><a href=""></a>        <span class="bu">super</span>().<span class="fu">__init__</span>(</span>
+<span id="cb38-20"><a href=""></a>            openai_api_base<span class="op">=</span>openai_api_base,</span>
+<span id="cb38-21"><a href=""></a>            openai_api_key<span class="op">=</span>openai_api_key,</span>
+<span id="cb38-22"><a href=""></a>            model_name<span class="op">=</span>model_name,</span>
+<span id="cb38-23"><a href=""></a>            <span class="op">**</span>kwargs,</span>
+<span id="cb38-24"><a href=""></a>        )</span>
+<span id="cb38-25"><a href=""></a></span>
+<span id="cb38-26"><a href=""></a>llm_openrouter <span class="op">=</span> ChatOpenRouter(model_name<span class="op">=</span><span class="st">"meta-llama/llama-3.1-405b-instruct"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="graph-only-retrieval-6" class="slide level2">
 <h2>Graph-only retrieval</h2>
 <div id="b117560e-a7ca-4388-95af-59a231deb309" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-09-25T07:00:59.169283Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-09-25T07:00:59.168719Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-09-25T07:00:59.457909Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-09-25T07:00:59.457005Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2024-09-25T07:00:59.169231Z&quot;}" data-execution_count="34">
-<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href=""></a><span class="im">from</span> langchain.chains <span class="im">import</span> KuzuQAChain</span>
-<span id="cb38-2"><a href=""></a><span class="im">from</span> langchain_community.graphs <span class="im">import</span> KuzuGraph</span>
-<span id="cb38-3"><a href=""></a></span>
-<span id="cb38-4"><a href=""></a>graph <span class="op">=</span> KuzuGraph(db)</span>
-<span id="cb38-5"><a href=""></a>chain <span class="op">=</span> KuzuQAChain.from_llm(</span>
-<span id="cb38-6"><a href=""></a>    cypher_llm<span class="op">=</span>llm_openrouter,</span>
-<span id="cb38-7"><a href=""></a>    qa_llm<span class="op">=</span>llm_openrouter,</span>
-<span id="cb38-8"><a href=""></a>    graph<span class="op">=</span>graph,</span>
-<span id="cb38-9"><a href=""></a>    verbose<span class="op">=</span><span class="va">True</span>,</span>
-<span id="cb38-10"><a href=""></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a href=""></a><span class="im">from</span> langchain.chains <span class="im">import</span> KuzuQAChain</span>
+<span id="cb39-2"><a href=""></a><span class="im">from</span> langchain_community.graphs <span class="im">import</span> KuzuGraph</span>
+<span id="cb39-3"><a href=""></a></span>
+<span id="cb39-4"><a href=""></a>graph <span class="op">=</span> KuzuGraph(db)</span>
+<span id="cb39-5"><a href=""></a>chain <span class="op">=</span> KuzuQAChain.from_llm(</span>
+<span id="cb39-6"><a href=""></a>    cypher_llm<span class="op">=</span>llm_openrouter,</span>
+<span id="cb39-7"><a href=""></a>    qa_llm<span class="op">=</span>llm_openrouter,</span>
+<span id="cb39-8"><a href=""></a>    graph<span class="op">=</span>graph,</span>
+<span id="cb39-9"><a href=""></a>    verbose<span class="op">=</span><span class="va">True</span>,</span>
+<span id="cb39-10"><a href=""></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="graph-only-retrieval-7" class="slide level2">
 <h2>Graph-only retrieval</h2>
 <div id="5caa9ea2-632e-4221-80b2-53c1bad65f78" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-09-25T07:01:04.877623Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-09-25T07:01:04.877041Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-09-25T07:01:13.373360Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-09-25T07:01:13.372510Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2024-09-25T07:01:04.877570Z&quot;}" data-execution_count="35">
-<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a href=""></a>chain.invoke(<span class="st">"How many songs does the black album have?"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href=""></a>chain.invoke(<span class="st">"How many songs does the black album have?"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 
@@ -1505,7 +1614,7 @@ Full Context:
 <section id="graph-only-retrieval-8" class="slide level2">
 <h2>Graph-only retrieval</h2>
 <div id="08cbaacd-9503-4d2a-ba2e-05c1a4cab340" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-09-25T07:01:15.890222Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-09-25T07:01:15.889624Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-09-25T07:01:18.682294Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-09-25T07:01:18.681461Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2024-09-25T07:01:15.890167Z&quot;}" data-execution_count="36">
-<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a href=""></a>chain.invoke(<span class="st">"Which songs does the black album have?"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb43-1"><a href=""></a>chain.invoke(<span class="st">"Which songs does the black album have?"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 
@@ -1526,87 +1635,87 @@ Full Context:
 <section id="graph-only-retrieval-9" class="slide level2">
 <h2>Graph-only retrieval</h2>
 <div id="5a0b01ea-b49f-417f-a313-82f36e595160" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-09-25T07:01:24.463393Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-09-25T07:01:24.462797Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-09-25T07:01:24.472522Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-09-25T07:01:24.470398Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2024-09-25T07:01:24.463342Z&quot;}" data-execution_count="37">
-<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb45-1"><a href=""></a><span class="kw">def</span> generate_kuzu_prompt(user_query):</span>
-<span id="cb45-2"><a href=""></a>    <span class="cf">return</span> <span class="st">"""Task: Generate Kùzu Cypher statement to query a graph database.</span></span>
-<span id="cb45-3"><a href=""></a></span>
-<span id="cb45-4"><a href=""></a><span class="st">Instructions:</span></span>
-<span id="cb45-5"><a href=""></a><span class="st">Generate the Kùzu dialect of Cypher with the following rules in mind:</span></span>
-<span id="cb45-6"><a href=""></a><span class="st">1. Do not omit the relationship pattern. Always use `()-[]-&gt;()` instead of `()-&gt;()`.</span></span>
-<span id="cb45-7"><a href=""></a><span class="st">2. Do not include triple backticks ``` in your response. Return only Cypher.</span></span>
-<span id="cb45-8"><a href=""></a><span class="st">3. Do not return any notes or comments in your response.</span></span>
-<span id="cb45-9"><a href=""></a></span>
-<span id="cb45-10"><a href=""></a></span>
-<span id="cb45-11"><a href=""></a><span class="st">Use only the provided relationship types and properties in the schema.</span></span>
-<span id="cb45-12"><a href=""></a><span class="st">Do not use any other relationship types or properties that are not provided.</span></span>
-<span id="cb45-13"><a href=""></a><span class="st">Schema:</span><span class="ch">\n</span><span class="st">"""</span> <span class="op">+</span> graph.get_schema <span class="op">+</span> <span class="st">"""</span><span class="ch">\n</span><span class="st">Example:</span></span>
-<span id="cb45-14"><a href=""></a><span class="st">The question is:</span><span class="ch">\n</span><span class="st">"Which songs does the load album have?"</span></span>
-<span id="cb45-15"><a href=""></a><span class="st">MATCH (a:ALBUM {name: 'Load'})&lt;-[:IN_ALBUM]-(s:SONG) RETURN s.name</span></span>
-<span id="cb45-16"><a href=""></a></span>
-<span id="cb45-17"><a href=""></a><span class="st">Note: Do not include any explanations or apologies in your responses.</span></span>
-<span id="cb45-18"><a href=""></a><span class="st">Do not respond to any questions that might ask anything else than for you to construct a Cypher statement.</span></span>
-<span id="cb45-19"><a href=""></a><span class="st">Do not include any text except the generated Cypher statement.</span></span>
-<span id="cb45-20"><a href=""></a></span>
-<span id="cb45-21"><a href=""></a><span class="st">The question is:</span><span class="ch">\n</span><span class="st">"""</span> <span class="op">+</span> user_query</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb46-1"><a href=""></a><span class="kw">def</span> generate_kuzu_prompt(user_query):</span>
+<span id="cb46-2"><a href=""></a>    <span class="cf">return</span> <span class="st">"""Task: Generate Kùzu Cypher statement to query a graph database.</span></span>
+<span id="cb46-3"><a href=""></a></span>
+<span id="cb46-4"><a href=""></a><span class="st">Instructions:</span></span>
+<span id="cb46-5"><a href=""></a><span class="st">Generate the Kùzu dialect of Cypher with the following rules in mind:</span></span>
+<span id="cb46-6"><a href=""></a><span class="st">1. Do not omit the relationship pattern. Always use `()-[]-&gt;()` instead of `()-&gt;()`.</span></span>
+<span id="cb46-7"><a href=""></a><span class="st">2. Do not include triple backticks ``` in your response. Return only Cypher.</span></span>
+<span id="cb46-8"><a href=""></a><span class="st">3. Do not return any notes or comments in your response.</span></span>
+<span id="cb46-9"><a href=""></a></span>
+<span id="cb46-10"><a href=""></a></span>
+<span id="cb46-11"><a href=""></a><span class="st">Use only the provided relationship types and properties in the schema.</span></span>
+<span id="cb46-12"><a href=""></a><span class="st">Do not use any other relationship types or properties that are not provided.</span></span>
+<span id="cb46-13"><a href=""></a><span class="st">Schema:</span><span class="ch">\n</span><span class="st">"""</span> <span class="op">+</span> graph.get_schema <span class="op">+</span> <span class="st">"""</span><span class="ch">\n</span><span class="st">Example:</span></span>
+<span id="cb46-14"><a href=""></a><span class="st">The question is:</span><span class="ch">\n</span><span class="st">"Which songs does the load album have?"</span></span>
+<span id="cb46-15"><a href=""></a><span class="st">MATCH (a:ALBUM {name: 'Load'})&lt;-[:IN_ALBUM]-(s:SONG) RETURN s.name</span></span>
+<span id="cb46-16"><a href=""></a></span>
+<span id="cb46-17"><a href=""></a><span class="st">Note: Do not include any explanations or apologies in your responses.</span></span>
+<span id="cb46-18"><a href=""></a><span class="st">Do not respond to any questions that might ask anything else than for you to construct a Cypher statement.</span></span>
+<span id="cb46-19"><a href=""></a><span class="st">Do not include any text except the generated Cypher statement.</span></span>
+<span id="cb46-20"><a href=""></a></span>
+<span id="cb46-21"><a href=""></a><span class="st">The question is:</span><span class="ch">\n</span><span class="st">"""</span> <span class="op">+</span> user_query</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="graph-only-retrieval-10" class="slide level2">
 <h2>Graph-only retrieval</h2>
 <div id="86d34379-83fe-49a5-8331-0e225f720eb5" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-09-25T07:01:25.992893Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-09-25T07:01:25.992360Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-09-25T07:01:26.001131Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-09-25T07:01:25.999450Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2024-09-25T07:01:25.992843Z&quot;}" data-execution_count="38">
-<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb46-1"><a href=""></a><span class="kw">def</span> generate_final_prompt(query,cypher_query,col_name,_values):</span>
-<span id="cb46-2"><a href=""></a>    <span class="cf">return</span> <span class="ss">f"""You are an assistant that helps to form nice and human understandable answers.</span></span>
-<span id="cb46-3"><a href=""></a><span class="ss">The information part contains the provided information that you must use to construct an answer.</span></span>
-<span id="cb46-4"><a href=""></a><span class="ss">The provided information is authoritative, you must never doubt it or try to use your internal knowledge to correct it.</span></span>
-<span id="cb46-5"><a href=""></a><span class="ss">Make the answer sound as a response to the question. Do not mention that you based the result on the given information.</span></span>
-<span id="cb46-6"><a href=""></a><span class="ss">Here is an example:</span></span>
-<span id="cb46-7"><a href=""></a></span>
-<span id="cb46-8"><a href=""></a><span class="ss">Question: Which managers own Neo4j stocks?</span></span>
-<span id="cb46-9"><a href=""></a><span class="ss">Context:[manager:CTL LLC, manager:JANE STREET GROUP LLC]</span></span>
-<span id="cb46-10"><a href=""></a><span class="ss">Helpful Answer: CTL LLC, JANE STREET GROUP LLC owns Neo4j stocks.</span></span>
-<span id="cb46-11"><a href=""></a></span>
-<span id="cb46-12"><a href=""></a><span class="ss">Follow this example when generating answers.</span></span>
-<span id="cb46-13"><a href=""></a><span class="ss">If the provided information is empty, say that you don't know the answer.</span></span>
-<span id="cb46-14"><a href=""></a><span class="ss">Query:</span><span class="ch">\n</span><span class="sc">{</span>cypher_query<span class="sc">}</span></span>
-<span id="cb46-15"><a href=""></a><span class="ss">Information:</span></span>
-<span id="cb46-16"><a href=""></a><span class="ss">[</span><span class="sc">{</span>col_name<span class="sc">}</span><span class="ss">: </span><span class="sc">{</span>_values<span class="sc">}</span><span class="ss">]</span></span>
-<span id="cb46-17"><a href=""></a></span>
-<span id="cb46-18"><a href=""></a><span class="ss">Question: </span><span class="sc">{</span>query<span class="sc">}</span></span>
-<span id="cb46-19"><a href=""></a><span class="ss">Helpful Answer:</span></span>
-<span id="cb46-20"><a href=""></a><span class="ss">"""</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb47-1"><a href=""></a><span class="kw">def</span> generate_final_prompt(query,cypher_query,col_name,_values):</span>
+<span id="cb47-2"><a href=""></a>    <span class="cf">return</span> <span class="ss">f"""You are an assistant that helps to form nice and human understandable answers.</span></span>
+<span id="cb47-3"><a href=""></a><span class="ss">The information part contains the provided information that you must use to construct an answer.</span></span>
+<span id="cb47-4"><a href=""></a><span class="ss">The provided information is authoritative, you must never doubt it or try to use your internal knowledge to correct it.</span></span>
+<span id="cb47-5"><a href=""></a><span class="ss">Make the answer sound as a response to the question. Do not mention that you based the result on the given information.</span></span>
+<span id="cb47-6"><a href=""></a><span class="ss">Here is an example:</span></span>
+<span id="cb47-7"><a href=""></a></span>
+<span id="cb47-8"><a href=""></a><span class="ss">Question: Which managers own Neo4j stocks?</span></span>
+<span id="cb47-9"><a href=""></a><span class="ss">Context:[manager:CTL LLC, manager:JANE STREET GROUP LLC]</span></span>
+<span id="cb47-10"><a href=""></a><span class="ss">Helpful Answer: CTL LLC, JANE STREET GROUP LLC owns Neo4j stocks.</span></span>
+<span id="cb47-11"><a href=""></a></span>
+<span id="cb47-12"><a href=""></a><span class="ss">Follow this example when generating answers.</span></span>
+<span id="cb47-13"><a href=""></a><span class="ss">If the provided information is empty, say that you don't know the answer.</span></span>
+<span id="cb47-14"><a href=""></a><span class="ss">Query:</span><span class="ch">\n</span><span class="sc">{</span>cypher_query<span class="sc">}</span></span>
+<span id="cb47-15"><a href=""></a><span class="ss">Information:</span></span>
+<span id="cb47-16"><a href=""></a><span class="ss">[</span><span class="sc">{</span>col_name<span class="sc">}</span><span class="ss">: </span><span class="sc">{</span>_values<span class="sc">}</span><span class="ss">]</span></span>
+<span id="cb47-17"><a href=""></a></span>
+<span id="cb47-18"><a href=""></a><span class="ss">Question: </span><span class="sc">{</span>query<span class="sc">}</span></span>
+<span id="cb47-19"><a href=""></a><span class="ss">Helpful Answer:</span></span>
+<span id="cb47-20"><a href=""></a><span class="ss">"""</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="graph-only-retrieval-11" class="slide level2">
 <h2>Graph-only retrieval</h2>
 <div id="5ed21db0-9078-4c38-ac77-b5c925d1165c" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-09-25T07:01:27.314968Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-09-25T07:01:27.314437Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-09-25T07:01:27.326518Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-09-25T07:01:27.324850Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2024-09-25T07:01:27.314919Z&quot;}" data-execution_count="39">
-<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb47-1"><a href=""></a><span class="kw">def</span> generate_kg_response(query):</span>
-<span id="cb47-2"><a href=""></a>    prompt <span class="op">=</span> generate_kuzu_prompt(query)</span>
-<span id="cb47-3"><a href=""></a>    cypher_query_response <span class="op">=</span> llm.create_chat_completion(</span>
-<span id="cb47-4"><a href=""></a>        messages<span class="op">=</span>[{<span class="st">"role"</span>: <span class="st">"user"</span>, <span class="st">"content"</span>: prompt}], </span>
-<span id="cb47-5"><a href=""></a>        temperature<span class="op">=</span><span class="dv">0</span>,</span>
-<span id="cb47-6"><a href=""></a>        seed<span class="op">=</span><span class="dv">42</span></span>
-<span id="cb47-7"><a href=""></a>    )</span>
-<span id="cb47-8"><a href=""></a>    cypher_query <span class="op">=</span> cypher_query_response[<span class="st">"choices"</span>][<span class="dv">0</span>][<span class="st">"message"</span>][<span class="st">"content"</span>]</span>
-<span id="cb47-9"><a href=""></a>    response <span class="op">=</span> conn.execute(</span>
-<span id="cb47-10"><a href=""></a>        <span class="ss">f"""</span></span>
-<span id="cb47-11"><a href=""></a><span class="ss">        </span><span class="sc">{</span>cypher_query<span class="sc">}</span></span>
-<span id="cb47-12"><a href=""></a><span class="ss">        """</span></span>
-<span id="cb47-13"><a href=""></a>    )</span>
-<span id="cb47-14"><a href=""></a>    df <span class="op">=</span> response.get_as_pl()</span>
-<span id="cb47-15"><a href=""></a>    col_name <span class="op">=</span> df.columns[<span class="dv">0</span>]</span>
-<span id="cb47-16"><a href=""></a>    _values <span class="op">=</span> df[col_name].to_list()</span>
-<span id="cb47-17"><a href=""></a>    final_prompt <span class="op">=</span> generate_final_prompt(query,cypher_query,col_name,_values)</span>
-<span id="cb47-18"><a href=""></a>    final_response <span class="op">=</span> llm.create_chat_completion(</span>
-<span id="cb47-19"><a href=""></a>        messages<span class="op">=</span>[{<span class="st">"role"</span>: <span class="st">"user"</span>, <span class="st">"content"</span>: final_prompt}], </span>
-<span id="cb47-20"><a href=""></a>        temperature<span class="op">=</span><span class="dv">0</span>,</span>
-<span id="cb47-21"><a href=""></a>        seed<span class="op">=</span><span class="dv">42</span></span>
-<span id="cb47-22"><a href=""></a>    )</span>
-<span id="cb47-23"><a href=""></a>    <span class="cf">return</span> final_response[<span class="st">"choices"</span>][<span class="dv">0</span>][<span class="st">"message"</span>][<span class="st">"content"</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb48-1"><a href=""></a><span class="kw">def</span> generate_kg_response(query):</span>
+<span id="cb48-2"><a href=""></a>    prompt <span class="op">=</span> generate_kuzu_prompt(query)</span>
+<span id="cb48-3"><a href=""></a>    cypher_query_response <span class="op">=</span> llm.create_chat_completion(</span>
+<span id="cb48-4"><a href=""></a>        messages<span class="op">=</span>[{<span class="st">"role"</span>: <span class="st">"user"</span>, <span class="st">"content"</span>: prompt}], </span>
+<span id="cb48-5"><a href=""></a>        temperature<span class="op">=</span><span class="dv">0</span>,</span>
+<span id="cb48-6"><a href=""></a>        seed<span class="op">=</span><span class="dv">42</span></span>
+<span id="cb48-7"><a href=""></a>    )</span>
+<span id="cb48-8"><a href=""></a>    cypher_query <span class="op">=</span> cypher_query_response[<span class="st">"choices"</span>][<span class="dv">0</span>][<span class="st">"message"</span>][<span class="st">"content"</span>]</span>
+<span id="cb48-9"><a href=""></a>    response <span class="op">=</span> conn.execute(</span>
+<span id="cb48-10"><a href=""></a>        <span class="ss">f"""</span></span>
+<span id="cb48-11"><a href=""></a><span class="ss">        </span><span class="sc">{</span>cypher_query<span class="sc">}</span></span>
+<span id="cb48-12"><a href=""></a><span class="ss">        """</span></span>
+<span id="cb48-13"><a href=""></a>    )</span>
+<span id="cb48-14"><a href=""></a>    df <span class="op">=</span> response.get_as_pl()</span>
+<span id="cb48-15"><a href=""></a>    col_name <span class="op">=</span> df.columns[<span class="dv">0</span>]</span>
+<span id="cb48-16"><a href=""></a>    _values <span class="op">=</span> df[col_name].to_list()</span>
+<span id="cb48-17"><a href=""></a>    final_prompt <span class="op">=</span> generate_final_prompt(query,cypher_query,col_name,_values)</span>
+<span id="cb48-18"><a href=""></a>    final_response <span class="op">=</span> llm.create_chat_completion(</span>
+<span id="cb48-19"><a href=""></a>        messages<span class="op">=</span>[{<span class="st">"role"</span>: <span class="st">"user"</span>, <span class="st">"content"</span>: final_prompt}], </span>
+<span id="cb48-20"><a href=""></a>        temperature<span class="op">=</span><span class="dv">0</span>,</span>
+<span id="cb48-21"><a href=""></a>        seed<span class="op">=</span><span class="dv">42</span></span>
+<span id="cb48-22"><a href=""></a>    )</span>
+<span id="cb48-23"><a href=""></a>    <span class="cf">return</span> final_response[<span class="st">"choices"</span>][<span class="dv">0</span>][<span class="st">"message"</span>][<span class="st">"content"</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="graph-only-retrieval-12" class="slide level2">
 <h2>Graph-only retrieval</h2>
 <div id="6015d02c-df89-424d-a2a5-954b6581ce3a" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-09-25T07:01:28.330990Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-09-25T07:01:28.330462Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-09-25T07:01:29.443336Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-09-25T07:01:29.442541Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2024-09-25T07:01:28.330941Z&quot;}" data-execution_count="40">
-<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb48-1"><a href=""></a>query <span class="op">=</span> <span class="st">"How many songs does the black album have?"</span></span>
-<span id="cb48-2"><a href=""></a><span class="bu">print</span>(generate_kg_response(query))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb49-1"><a href=""></a>query <span class="op">=</span> <span class="st">"How many songs does the black album have?"</span></span>
+<span id="cb49-2"><a href=""></a><span class="bu">print</span>(generate_kg_response(query))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>The Black Album has 12 songs.</code></pre>
 </div>
@@ -1615,8 +1724,8 @@ Full Context:
 <section id="graph-only-retrieval-13" class="slide level2">
 <h2>Graph-only retrieval</h2>
 <div id="baf1adab-27da-4b81-afe5-69b3b5f17c42" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-09-25T07:01:31.464421Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-09-25T07:01:31.463507Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-09-25T07:01:33.925270Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-09-25T07:01:33.924000Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2024-09-25T07:01:31.464363Z&quot;}" data-execution_count="41">
-<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb50-1"><a href=""></a>query <span class="op">=</span> <span class="st">"Which songs does the black album have?"</span></span>
-<span id="cb50-2"><a href=""></a><span class="bu">print</span>(generate_kg_response(query))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb51-1"><a href=""></a>query <span class="op">=</span> <span class="st">"Which songs does the black album have?"</span></span>
+<span id="cb51-2"><a href=""></a><span class="bu">print</span>(generate_kg_response(query))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>The Black Album has the following songs: Sad But True, My Friend Of Misery, Holier Than Thou, "Don't Tread On Me", Through The Never, The God That Failed, Enter Sandman, Nothing Else Matters, Of Wolf And Man, The Unforgiven, Wherever I May Roam, The Struggle Within.</code></pre>
 </div>
@@ -1641,46 +1750,46 @@ Full Context:
 <section id="classification" class="slide level2">
 <h2>Classification</h2>
 <div id="2783bab2-6bba-49d6-a58f-5eedbdb09b14" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-09-25T07:01:41.082851Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-09-25T07:01:41.082306Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-09-25T07:01:41.090236Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-09-25T07:01:41.088923Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2024-09-25T07:01:41.082799Z&quot;}" data-execution_count="43">
-<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb52-1"><a href=""></a><span class="kw">def</span> generate_hermes_prompt(user_prompt):</span>
-<span id="cb52-2"><a href=""></a>    <span class="cf">return</span> (</span>
-<span id="cb52-3"><a href=""></a>        <span class="st">"&lt;|im_start|&gt;system</span><span class="ch">\n</span><span class="st">"</span></span>
-<span id="cb52-4"><a href=""></a>        <span class="st">"You are a world class AI model classifier"</span></span>
-<span id="cb52-5"><a href=""></a>        <span class="st">"&lt;|im_end|&gt;</span><span class="ch">\n</span><span class="st">"</span></span>
-<span id="cb52-6"><a href=""></a>        <span class="st">"&lt;|im_start|&gt;user</span><span class="ch">\n</span><span class="st">"</span></span>
-<span id="cb52-7"><a href=""></a>        <span class="op">+</span> user_prompt</span>
-<span id="cb52-8"><a href=""></a>        <span class="op">+</span> <span class="st">"&lt;|im_end|&gt;"</span></span>
-<span id="cb52-9"><a href=""></a>        <span class="op">+</span> <span class="st">"</span><span class="ch">\n</span><span class="st">&lt;|im_start|&gt;assistant</span><span class="ch">\n</span><span class="st">"</span></span>
-<span id="cb52-10"><a href=""></a>    )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb53-1"><a href=""></a><span class="kw">def</span> generate_hermes_prompt(user_prompt):</span>
+<span id="cb53-2"><a href=""></a>    <span class="cf">return</span> (</span>
+<span id="cb53-3"><a href=""></a>        <span class="st">"&lt;|im_start|&gt;system</span><span class="ch">\n</span><span class="st">"</span></span>
+<span id="cb53-4"><a href=""></a>        <span class="st">"You are a world class AI model classifier"</span></span>
+<span id="cb53-5"><a href=""></a>        <span class="st">"&lt;|im_end|&gt;</span><span class="ch">\n</span><span class="st">"</span></span>
+<span id="cb53-6"><a href=""></a>        <span class="st">"&lt;|im_start|&gt;user</span><span class="ch">\n</span><span class="st">"</span></span>
+<span id="cb53-7"><a href=""></a>        <span class="op">+</span> user_prompt</span>
+<span id="cb53-8"><a href=""></a>        <span class="op">+</span> <span class="st">"&lt;|im_end|&gt;"</span></span>
+<span id="cb53-9"><a href=""></a>        <span class="op">+</span> <span class="st">"</span><span class="ch">\n</span><span class="st">&lt;|im_start|&gt;assistant</span><span class="ch">\n</span><span class="st">"</span></span>
+<span id="cb53-10"><a href=""></a>    )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="classification-1" class="slide level2">
 <h2>Classification</h2>
 <div id="54f788a6-5f97-4d2a-b05a-16c5e5573832" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-09-25T07:01:42.770555Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-09-25T07:01:42.770002Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-09-25T07:01:44.866743Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-09-25T07:01:44.865937Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2024-09-25T07:01:42.770503Z&quot;}" data-execution_count="44">
-<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb53-1"><a href=""></a><span class="im">from</span> outlines <span class="im">import</span> generate, models</span>
-<span id="cb53-2"><a href=""></a><span class="im">from</span> outlines.samplers <span class="im">import</span> greedy</span>
-<span id="cb53-3"><a href=""></a></span>
-<span id="cb53-4"><a href=""></a><span class="kw">def</span> get_classification(query):</span>
-<span id="cb53-5"><a href=""></a>    model <span class="op">=</span> models.LlamaCpp(llm)</span>
-<span id="cb53-6"><a href=""></a>    generator <span class="op">=</span> generate.choice(model, [<span class="st">"YES"</span>, <span class="st">"NO"</span>], sampler<span class="op">=</span>greedy())</span>
-<span id="cb53-7"><a href=""></a>    prompt <span class="op">=</span> <span class="st">"Answer only YES or NO. Is the question '"</span> <span class="op">+</span> query <span class="op">+</span> <span class="st">"' related to the content of a song?"</span></span>
-<span id="cb53-8"><a href=""></a>    prompt <span class="op">=</span> generate_hermes_prompt(prompt)</span>
-<span id="cb53-9"><a href=""></a>    response <span class="op">=</span> generator(prompt, max_tokens<span class="op">=</span><span class="dv">1024</span>, temperature<span class="op">=</span><span class="dv">0</span>, seed<span class="op">=</span><span class="dv">42</span>)</span>
-<span id="cb53-10"><a href=""></a>    <span class="cf">return</span> response</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb54"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb54-1"><a href=""></a><span class="im">from</span> outlines <span class="im">import</span> generate, models</span>
+<span id="cb54-2"><a href=""></a><span class="im">from</span> outlines.samplers <span class="im">import</span> greedy</span>
+<span id="cb54-3"><a href=""></a></span>
+<span id="cb54-4"><a href=""></a><span class="kw">def</span> get_classification(query):</span>
+<span id="cb54-5"><a href=""></a>    model <span class="op">=</span> models.LlamaCpp(llm)</span>
+<span id="cb54-6"><a href=""></a>    generator <span class="op">=</span> generate.choice(model, [<span class="st">"YES"</span>, <span class="st">"NO"</span>], sampler<span class="op">=</span>greedy())</span>
+<span id="cb54-7"><a href=""></a>    prompt <span class="op">=</span> <span class="st">"Answer only YES or NO. Is the question '"</span> <span class="op">+</span> query <span class="op">+</span> <span class="st">"' related to the content of a song?"</span></span>
+<span id="cb54-8"><a href=""></a>    prompt <span class="op">=</span> generate_hermes_prompt(prompt)</span>
+<span id="cb54-9"><a href=""></a>    response <span class="op">=</span> generator(prompt, max_tokens<span class="op">=</span><span class="dv">1024</span>, temperature<span class="op">=</span><span class="dv">0</span>, seed<span class="op">=</span><span class="dv">42</span>)</span>
+<span id="cb54-10"><a href=""></a>    <span class="cf">return</span> response</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="classification-2" class="slide level2">
 <h2>Classification</h2>
 <div id="6ae946ef-10ce-48ae-a7a7-07635fd74674" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-09-25T07:01:44.871549Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-09-25T07:01:44.871355Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-09-25T07:01:45.785173Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-09-25T07:01:45.783889Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2024-09-25T07:01:44.871533Z&quot;}" data-execution_count="45">
-<div class="sourceCode cell-code" id="cb54"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb54-1"><a href=""></a>queries <span class="op">=</span> [</span>
-<span id="cb54-2"><a href=""></a>    <span class="st">"Which song is about a boy who is having nightmares?"</span>,</span>
-<span id="cb54-3"><a href=""></a>    <span class="st">"Which song is about a guy who is so badly wounded in war so he no longer has any senses?"</span>,</span>
-<span id="cb54-4"><a href=""></a>    <span class="st">"How many songs does the black album have?"</span>,</span>
-<span id="cb54-5"><a href=""></a>    <span class="st">"Which songs does the black album have?"</span></span>
-<span id="cb54-6"><a href=""></a>]</span>
-<span id="cb54-7"><a href=""></a><span class="cf">for</span> query <span class="kw">in</span> queries:</span>
-<span id="cb54-8"><a href=""></a>    <span class="bu">print</span>(<span class="ss">f"**</span><span class="sc">{</span>query<span class="sc">}</span><span class="ss">**"</span>)</span>
-<span id="cb54-9"><a href=""></a>    <span class="bu">print</span>(get_classification(query))</span>
-<span id="cb54-10"><a href=""></a>    <span class="bu">print</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb55-1"><a href=""></a>queries <span class="op">=</span> [</span>
+<span id="cb55-2"><a href=""></a>    <span class="st">"Which song is about a boy who is having nightmares?"</span>,</span>
+<span id="cb55-3"><a href=""></a>    <span class="st">"Which song is about a guy who is so badly wounded in war so he no longer has any senses?"</span>,</span>
+<span id="cb55-4"><a href=""></a>    <span class="st">"How many songs does the black album have?"</span>,</span>
+<span id="cb55-5"><a href=""></a>    <span class="st">"Which songs does the black album have?"</span></span>
+<span id="cb55-6"><a href=""></a>]</span>
+<span id="cb55-7"><a href=""></a><span class="cf">for</span> query <span class="kw">in</span> queries:</span>
+<span id="cb55-8"><a href=""></a>    <span class="bu">print</span>(<span class="ss">f"**</span><span class="sc">{</span>query<span class="sc">}</span><span class="ss">**"</span>)</span>
+<span id="cb55-9"><a href=""></a>    <span class="bu">print</span>(get_classification(query))</span>
+<span id="cb55-10"><a href=""></a>    <span class="bu">print</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>**Which song is about a boy who is having nightmares?**
 YES
@@ -1700,28 +1809,28 @@ NO
 <section id="combining-graph-and-vector-retrieval-1" class="slide level2">
 <h2>Combining graph and vector retrieval</h2>
 <div id="407c86bd-4fc4-49c4-9539-7e9532e41397" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-09-25T07:01:48.526857Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-09-25T07:01:48.526328Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-09-25T07:01:48.534686Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-09-25T07:01:48.533127Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2024-09-25T07:01:48.526807Z&quot;}" data-execution_count="48">
-<div class="sourceCode cell-code" id="cb56"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb56-1"><a href=""></a><span class="kw">def</span> get_final_response(query):</span>
-<span id="cb56-2"><a href=""></a>    query_class <span class="op">=</span> get_classification(query)</span>
-<span id="cb56-3"><a href=""></a>    <span class="cf">if</span> query_class <span class="op">==</span> <span class="st">'YES'</span>:</span>
-<span id="cb56-4"><a href=""></a>        response <span class="op">=</span> generate_response(query)</span>
-<span id="cb56-5"><a href=""></a>    <span class="cf">else</span>:</span>
-<span id="cb56-6"><a href=""></a>        response <span class="op">=</span> generate_kg_response(query)</span>
-<span id="cb56-7"><a href=""></a>    <span class="cf">return</span> response</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb57"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb57-1"><a href=""></a><span class="kw">def</span> get_final_response(query):</span>
+<span id="cb57-2"><a href=""></a>    query_class <span class="op">=</span> get_classification(query)</span>
+<span id="cb57-3"><a href=""></a>    <span class="cf">if</span> query_class <span class="op">==</span> <span class="st">'YES'</span>:</span>
+<span id="cb57-4"><a href=""></a>        response <span class="op">=</span> generate_response(query)</span>
+<span id="cb57-5"><a href=""></a>    <span class="cf">else</span>:</span>
+<span id="cb57-6"><a href=""></a>        response <span class="op">=</span> generate_kg_response(query)</span>
+<span id="cb57-7"><a href=""></a>    <span class="cf">return</span> response</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="combining-graph-and-vector-retrieval-2" class="slide level2">
 <h2>Combining graph and vector retrieval</h2>
 <div id="39163826-44da-4ded-9d83-169e96d2e91d" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-09-25T07:01:50.745377Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-09-25T07:01:50.744841Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-09-25T07:02:03.699761Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-09-25T07:02:03.698759Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2024-09-25T07:01:50.745328Z&quot;}" data-execution_count="49">
-<div class="sourceCode cell-code" id="cb57"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb57-1"><a href=""></a>queries <span class="op">=</span> [</span>
-<span id="cb57-2"><a href=""></a>    <span class="st">"Which song is about a boy who is having nightmares?"</span>,</span>
-<span id="cb57-3"><a href=""></a>    <span class="st">"Which song is about a guy who is so badly wounded in war so he no longer has any senses"</span>,</span>
-<span id="cb57-4"><a href=""></a>    <span class="st">"How many songs does the black album have?"</span>,</span>
-<span id="cb57-5"><a href=""></a>    <span class="st">"Which songs does the black album have?"</span></span>
-<span id="cb57-6"><a href=""></a>]</span>
-<span id="cb57-7"><a href=""></a><span class="cf">for</span> query <span class="kw">in</span> queries:</span>
-<span id="cb57-8"><a href=""></a>    <span class="bu">print</span>(<span class="ss">f"**</span><span class="sc">{</span>query<span class="sc">}</span><span class="ss">**"</span>)</span>
-<span id="cb57-9"><a href=""></a>    <span class="bu">print</span>(get_final_response(query))</span>
-<span id="cb57-10"><a href=""></a>    <span class="bu">print</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb58"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb58-1"><a href=""></a>queries <span class="op">=</span> [</span>
+<span id="cb58-2"><a href=""></a>    <span class="st">"Which song is about a boy who is having nightmares?"</span>,</span>
+<span id="cb58-3"><a href=""></a>    <span class="st">"Which song is about a guy who is so badly wounded in war so he no longer has any senses"</span>,</span>
+<span id="cb58-4"><a href=""></a>    <span class="st">"How many songs does the black album have?"</span>,</span>
+<span id="cb58-5"><a href=""></a>    <span class="st">"Which songs does the black album have?"</span></span>
+<span id="cb58-6"><a href=""></a>]</span>
+<span id="cb58-7"><a href=""></a><span class="cf">for</span> query <span class="kw">in</span> queries:</span>
+<span id="cb58-8"><a href=""></a>    <span class="bu">print</span>(<span class="ss">f"**</span><span class="sc">{</span>query<span class="sc">}</span><span class="ss">**"</span>)</span>
+<span id="cb58-9"><a href=""></a>    <span class="bu">print</span>(get_final_response(query))</span>
+<span id="cb58-10"><a href=""></a>    <span class="bu">print</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>**Which song is about a boy who is having nightmares?**
 The song that is about a boy who is having nightmares is "The Black Album: Enter Sandman". The lyrics mention "Say your prayers little one", "tuck you in warm within", "keep you free from sin till the sandman he comes", "sleep with one eye open gripping your pillow tight", "dreams of war dreams of liars dreams of dragon's fire and of things that will bite", and "now I lay me down to sleep pray the lord my soul to keep". These lines indicate that the song is about a child having nightmares and fearing the dark.
@@ -1768,9 +1877,9 @@ The Black Album has the following songs: Sad But True, My Friend Of Misery, Holi
 <section id="knowledge-graph-construction-2" class="slide level2">
 <h2>Knowledge graph construction</h2>
 <div id="790eb05c-7d91-42f3-b35c-8f6d1611a31b" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-09-25T07:02:12.457504Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-09-25T07:02:12.456972Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-09-25T07:02:12.467551Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-09-25T07:02:12.465655Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2024-09-25T07:02:12.457454Z&quot;}" data-execution_count="52">
-<div class="sourceCode cell-code" id="cb59"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb59-1"><a href=""></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">'/home/asilva/quarto/2024-PyData-Paris/kuzu-graph-rag/data/curie/curie.txt'</span>, <span class="st">"r"</span>) <span class="im">as</span> f:</span>
-<span id="cb59-2"><a href=""></a>    curie_text <span class="op">=</span> f.read()</span>
-<span id="cb59-3"><a href=""></a><span class="bu">print</span>(curie_text)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb60"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb60-1"><a href=""></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">'/home/asilva/quarto/2024-PyData-Paris/kuzu-graph-rag/data/curie/curie.txt'</span>, <span class="st">"r"</span>) <span class="im">as</span> f:</span>
+<span id="cb60-2"><a href=""></a>    curie_text <span class="op">=</span> f.read()</span>
+<span id="cb60-3"><a href=""></a><span class="bu">print</span>(curie_text)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>When Marie Curie came to the United States for the first time, in May 1921, she had already discovered the elements radium and polonium, coined the term “radio-active” and won the Nobel Prize—twice. But the Polish-born scientist, almost pathologically shy and accustomed to spending most of her time in her Paris laboratory, was stunned by the fanfare that greeted her. In 1898 she indeed identified one of the substances and named it polonium, after her homeland. Five months later, she identified a second element, which the world came to know as radium. Curie described the elements she studied as “radio-active.”
 
@@ -1786,89 +1895,89 @@ This one, in chemistry, was for the discovery of polonium and radium. In her acc
 <section id="knowledge-graph-construction-3" class="slide level2">
 <h2>Knowledge graph construction</h2>
 <div id="13bd04c3-30b5-473d-add4-f247f741cbae" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-09-25T07:02:16.248617Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-09-25T07:02:16.248054Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-09-25T07:02:16.300064Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-09-25T07:02:16.299164Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2024-09-25T07:02:16.248565Z&quot;}" data-execution_count="53">
-<div class="sourceCode cell-code" id="cb61"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb61-1"><a href=""></a><span class="im">from</span> enum <span class="im">import</span> Enum</span>
-<span id="cb61-2"><a href=""></a><span class="im">from</span> pydantic <span class="im">import</span> BaseModel, Field</span>
-<span id="cb61-3"><a href=""></a></span>
-<span id="cb61-4"><a href=""></a><span class="kw">class</span> Node_Type(<span class="bu">str</span>, Enum):</span>
-<span id="cb61-5"><a href=""></a>    <span class="co">"""The type of node of the knowledge graph"""</span></span>
-<span id="cb61-6"><a href=""></a>    PERSON <span class="op">=</span> <span class="st">"PERSON"</span></span>
-<span id="cb61-7"><a href=""></a>    NOBEL_PRIZE_FIELD <span class="op">=</span> <span class="st">"NOBEL_PRIZE_FIELD"</span></span>
-<span id="cb61-8"><a href=""></a>    LOCATION <span class="op">=</span> <span class="st">"LOCATION"</span></span>
-<span id="cb61-9"><a href=""></a>    DISCOVERY <span class="op">=</span> <span class="st">"DISCOVERY"</span></span>
-<span id="cb61-10"><a href=""></a></span>
-<span id="cb61-11"><a href=""></a><span class="kw">class</span> Node(BaseModel):</span>
-<span id="cb61-12"><a href=""></a>    <span class="co">"""Node of the Knowledge Graph"""</span></span>
-<span id="cb61-13"><a href=""></a></span>
-<span id="cb61-14"><a href=""></a>    <span class="bu">id</span>: <span class="bu">int</span> <span class="op">=</span> Field(..., description<span class="op">=</span><span class="st">"Unique identifier of the node"</span>)</span>
-<span id="cb61-15"><a href=""></a>    label: <span class="bu">str</span> <span class="op">=</span> Field(..., description<span class="op">=</span><span class="st">"Label of the node"</span>)</span>
-<span id="cb61-16"><a href=""></a>    node_type : Node_Type</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb62"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb62-1"><a href=""></a><span class="im">from</span> enum <span class="im">import</span> Enum</span>
+<span id="cb62-2"><a href=""></a><span class="im">from</span> pydantic <span class="im">import</span> BaseModel, Field</span>
+<span id="cb62-3"><a href=""></a></span>
+<span id="cb62-4"><a href=""></a><span class="kw">class</span> Node_Type(<span class="bu">str</span>, Enum):</span>
+<span id="cb62-5"><a href=""></a>    <span class="co">"""The type of node of the knowledge graph"""</span></span>
+<span id="cb62-6"><a href=""></a>    PERSON <span class="op">=</span> <span class="st">"PERSON"</span></span>
+<span id="cb62-7"><a href=""></a>    NOBEL_PRIZE_FIELD <span class="op">=</span> <span class="st">"NOBEL_PRIZE_FIELD"</span></span>
+<span id="cb62-8"><a href=""></a>    LOCATION <span class="op">=</span> <span class="st">"LOCATION"</span></span>
+<span id="cb62-9"><a href=""></a>    DISCOVERY <span class="op">=</span> <span class="st">"DISCOVERY"</span></span>
+<span id="cb62-10"><a href=""></a></span>
+<span id="cb62-11"><a href=""></a><span class="kw">class</span> Node(BaseModel):</span>
+<span id="cb62-12"><a href=""></a>    <span class="co">"""Node of the Knowledge Graph"""</span></span>
+<span id="cb62-13"><a href=""></a></span>
+<span id="cb62-14"><a href=""></a>    <span class="bu">id</span>: <span class="bu">int</span> <span class="op">=</span> Field(..., description<span class="op">=</span><span class="st">"Unique identifier of the node"</span>)</span>
+<span id="cb62-15"><a href=""></a>    label: <span class="bu">str</span> <span class="op">=</span> Field(..., description<span class="op">=</span><span class="st">"Label of the node"</span>)</span>
+<span id="cb62-16"><a href=""></a>    node_type : Node_Type</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="knowledge-graph-construction-4" class="slide level2">
 <h2>Knowledge graph construction</h2>
 <div id="6d8917e4-5e66-40a7-b6ca-1f0d9966de69" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-09-25T07:02:18.097399Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-09-25T07:02:18.096805Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-09-25T07:02:18.113956Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-09-25T07:02:18.112688Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2024-09-25T07:02:18.097344Z&quot;}" data-execution_count="54">
-<div class="sourceCode cell-code" id="cb62"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb62-1"><a href=""></a><span class="kw">class</span> Edge_Type(<span class="bu">str</span>, Enum):</span>
-<span id="cb62-2"><a href=""></a>    <span class="co">"""The type of edge of the knowledge graph"""</span></span>
-<span id="cb62-3"><a href=""></a>    IS_MARRIED_TO <span class="op">=</span> <span class="st">"IS_MARRIED_TO"</span></span>
-<span id="cb62-4"><a href=""></a>    WORKED_WITH <span class="op">=</span> <span class="st">"WORKED_WITH"</span></span>
-<span id="cb62-5"><a href=""></a>    WON <span class="op">=</span> <span class="st">"WON"</span></span>
-<span id="cb62-6"><a href=""></a>    DISCOVERED <span class="op">=</span> <span class="st">"DISCOVERED"</span></span>
-<span id="cb62-7"><a href=""></a></span>
-<span id="cb62-8"><a href=""></a><span class="kw">class</span> Edge(BaseModel):</span>
-<span id="cb62-9"><a href=""></a>    <span class="co">"""Edge of the Knowledge Graph"""</span></span>
-<span id="cb62-10"><a href=""></a></span>
-<span id="cb62-11"><a href=""></a>    source: <span class="bu">int</span> <span class="op">=</span> Field(..., description<span class="op">=</span><span class="st">"Unique source of the edge"</span>)</span>
-<span id="cb62-12"><a href=""></a>    target: <span class="bu">int</span> <span class="op">=</span> Field(..., description<span class="op">=</span><span class="st">"Unique target of the edge"</span>)</span>
-<span id="cb62-13"><a href=""></a>    label: <span class="bu">str</span> <span class="op">=</span> Field(..., description<span class="op">=</span><span class="st">"Label of the edge"</span>)</span>
-<span id="cb62-14"><a href=""></a>    edge_type: Edge_Type</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb63"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb63-1"><a href=""></a><span class="kw">class</span> Edge_Type(<span class="bu">str</span>, Enum):</span>
+<span id="cb63-2"><a href=""></a>    <span class="co">"""The type of edge of the knowledge graph"""</span></span>
+<span id="cb63-3"><a href=""></a>    IS_MARRIED_TO <span class="op">=</span> <span class="st">"IS_MARRIED_TO"</span></span>
+<span id="cb63-4"><a href=""></a>    WORKED_WITH <span class="op">=</span> <span class="st">"WORKED_WITH"</span></span>
+<span id="cb63-5"><a href=""></a>    WON <span class="op">=</span> <span class="st">"WON"</span></span>
+<span id="cb63-6"><a href=""></a>    DISCOVERED <span class="op">=</span> <span class="st">"DISCOVERED"</span></span>
+<span id="cb63-7"><a href=""></a></span>
+<span id="cb63-8"><a href=""></a><span class="kw">class</span> Edge(BaseModel):</span>
+<span id="cb63-9"><a href=""></a>    <span class="co">"""Edge of the Knowledge Graph"""</span></span>
+<span id="cb63-10"><a href=""></a></span>
+<span id="cb63-11"><a href=""></a>    source: <span class="bu">int</span> <span class="op">=</span> Field(..., description<span class="op">=</span><span class="st">"Unique source of the edge"</span>)</span>
+<span id="cb63-12"><a href=""></a>    target: <span class="bu">int</span> <span class="op">=</span> Field(..., description<span class="op">=</span><span class="st">"Unique target of the edge"</span>)</span>
+<span id="cb63-13"><a href=""></a>    label: <span class="bu">str</span> <span class="op">=</span> Field(..., description<span class="op">=</span><span class="st">"Label of the edge"</span>)</span>
+<span id="cb63-14"><a href=""></a>    edge_type: Edge_Type</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="knowledge-graph-construction-5" class="slide level2">
 <h2>Knowledge graph construction</h2>
 <div id="3a5260dd-b10f-4d70-b513-1f95c880a771" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-09-25T07:02:20.066722Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-09-25T07:02:20.066160Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-09-25T07:02:20.079152Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-09-25T07:02:20.077436Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2024-09-25T07:02:20.066668Z&quot;}" data-execution_count="55">
-<div class="sourceCode cell-code" id="cb63"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb63-1"><a href=""></a><span class="im">from</span> typing <span class="im">import</span> List</span>
-<span id="cb63-2"><a href=""></a></span>
-<span id="cb63-3"><a href=""></a><span class="kw">class</span> KnowledgeGraph(BaseModel):</span>
-<span id="cb63-4"><a href=""></a>    <span class="co">"""Generated Knowledge Graph"""</span></span>
-<span id="cb63-5"><a href=""></a></span>
-<span id="cb63-6"><a href=""></a>    nodes: List[Node] <span class="op">=</span> Field(..., description<span class="op">=</span><span class="st">"List of nodes of the knowledge graph"</span>)</span>
-<span id="cb63-7"><a href=""></a>    edges: List[Edge] <span class="op">=</span> Field(..., description<span class="op">=</span><span class="st">"List of edges of the knowledge graph"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb64"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb64-1"><a href=""></a><span class="im">from</span> typing <span class="im">import</span> List</span>
+<span id="cb64-2"><a href=""></a></span>
+<span id="cb64-3"><a href=""></a><span class="kw">class</span> KnowledgeGraph(BaseModel):</span>
+<span id="cb64-4"><a href=""></a>    <span class="co">"""Generated Knowledge Graph"""</span></span>
+<span id="cb64-5"><a href=""></a></span>
+<span id="cb64-6"><a href=""></a>    nodes: List[Node] <span class="op">=</span> Field(..., description<span class="op">=</span><span class="st">"List of nodes of the knowledge graph"</span>)</span>
+<span id="cb64-7"><a href=""></a>    edges: List[Edge] <span class="op">=</span> Field(..., description<span class="op">=</span><span class="st">"List of edges of the knowledge graph"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="knowledge-graph-construction-6" class="slide level2">
 <h2>Knowledge graph construction</h2>
 <div id="596f3978-01d3-4c33-84bf-19393324a4b2" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-09-25T07:02:21.042815Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-09-25T07:02:21.042289Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-09-25T07:02:21.056858Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-09-25T07:02:21.055112Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2024-09-25T07:02:21.042764Z&quot;}" data-execution_count="56">
-<div class="sourceCode cell-code" id="cb64"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb64-1"><a href=""></a><span class="im">from</span> outlines.integrations.utils <span class="im">import</span> convert_json_schema_to_str</span>
-<span id="cb64-2"><a href=""></a><span class="im">from</span> outlines.fsm.json_schema <span class="im">import</span> build_regex_from_schema</span>
-<span id="cb64-3"><a href=""></a></span>
-<span id="cb64-4"><a href=""></a>json_schema <span class="op">=</span> KnowledgeGraph.model_json_schema()</span>
-<span id="cb64-5"><a href=""></a>schema_str <span class="op">=</span> convert_json_schema_to_str(json_schema<span class="op">=</span>json_schema)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb65"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb65-1"><a href=""></a><span class="im">from</span> outlines.integrations.utils <span class="im">import</span> convert_json_schema_to_str</span>
+<span id="cb65-2"><a href=""></a><span class="im">from</span> outlines.fsm.json_schema <span class="im">import</span> build_regex_from_schema</span>
+<span id="cb65-3"><a href=""></a></span>
+<span id="cb65-4"><a href=""></a>json_schema <span class="op">=</span> KnowledgeGraph.model_json_schema()</span>
+<span id="cb65-5"><a href=""></a>schema_str <span class="op">=</span> convert_json_schema_to_str(json_schema<span class="op">=</span>json_schema)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="knowledge-graph-construction-7" class="slide level2">
 <h2>Knowledge graph construction</h2>
 <div id="3b6bd486-f49a-4f4d-a270-71f304b799e0" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-09-25T07:02:22.633360Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-09-25T07:02:22.632828Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-09-25T07:02:22.641837Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-09-25T07:02:22.640020Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2024-09-25T07:02:22.633309Z&quot;}" data-execution_count="57">
-<div class="sourceCode cell-code" id="cb65"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb65-1"><a href=""></a><span class="kw">def</span> generate_hermes_prompt(user_prompt):</span>
-<span id="cb65-2"><a href=""></a>    <span class="cf">return</span> (</span>
-<span id="cb65-3"><a href=""></a>        <span class="st">"&lt;|im_start|&gt;system</span><span class="ch">\n</span><span class="st">"</span></span>
-<span id="cb65-4"><a href=""></a>        <span class="st">"You are a world class AI model who extract in JSON with correct Pydantic schema. "</span></span>
-<span id="cb65-5"><a href=""></a>        <span class="ss">f"Here's the json schema you must adhere to:</span><span class="ch">\n</span><span class="ss">&lt;schema&gt;</span><span class="ch">\n</span><span class="sc">{</span>schema_str<span class="sc">}</span><span class="ch">\n</span><span class="ss">&lt;/schema&gt;&lt;|im_end|&gt;</span><span class="ch">\n</span><span class="ss">"</span></span>
-<span id="cb65-6"><a href=""></a>        <span class="st">"&lt;|im_start|&gt;user</span><span class="ch">\n</span><span class="st">"</span></span>
-<span id="cb65-7"><a href=""></a>        <span class="op">+</span> user_prompt</span>
-<span id="cb65-8"><a href=""></a>        <span class="op">+</span> <span class="st">"&lt;|im_end|&gt;"</span></span>
-<span id="cb65-9"><a href=""></a>        <span class="op">+</span> <span class="st">"</span><span class="ch">\n</span><span class="st">&lt;|im_start|&gt;assistant</span><span class="ch">\n</span><span class="st">"</span></span>
-<span id="cb65-10"><a href=""></a>        <span class="st">"&lt;schema&gt;"</span></span>
-<span id="cb65-11"><a href=""></a>    )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb66"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb66-1"><a href=""></a><span class="kw">def</span> generate_hermes_prompt(user_prompt):</span>
+<span id="cb66-2"><a href=""></a>    <span class="cf">return</span> (</span>
+<span id="cb66-3"><a href=""></a>        <span class="st">"&lt;|im_start|&gt;system</span><span class="ch">\n</span><span class="st">"</span></span>
+<span id="cb66-4"><a href=""></a>        <span class="st">"You are a world class AI model who extract in JSON with correct Pydantic schema. "</span></span>
+<span id="cb66-5"><a href=""></a>        <span class="ss">f"Here's the json schema you must adhere to:</span><span class="ch">\n</span><span class="ss">&lt;schema&gt;</span><span class="ch">\n</span><span class="sc">{</span>schema_str<span class="sc">}</span><span class="ch">\n</span><span class="ss">&lt;/schema&gt;&lt;|im_end|&gt;</span><span class="ch">\n</span><span class="ss">"</span></span>
+<span id="cb66-6"><a href=""></a>        <span class="st">"&lt;|im_start|&gt;user</span><span class="ch">\n</span><span class="st">"</span></span>
+<span id="cb66-7"><a href=""></a>        <span class="op">+</span> user_prompt</span>
+<span id="cb66-8"><a href=""></a>        <span class="op">+</span> <span class="st">"&lt;|im_end|&gt;"</span></span>
+<span id="cb66-9"><a href=""></a>        <span class="op">+</span> <span class="st">"</span><span class="ch">\n</span><span class="st">&lt;|im_start|&gt;assistant</span><span class="ch">\n</span><span class="st">"</span></span>
+<span id="cb66-10"><a href=""></a>        <span class="st">"&lt;schema&gt;"</span></span>
+<span id="cb66-11"><a href=""></a>    )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="knowledge-graph-construction-8" class="slide level2">
 <h2>Knowledge graph construction</h2>
 <div id="a531416b-422e-41f1-bfd5-e2976bce6849" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-09-25T07:02:24.956625Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-09-25T07:02:24.956075Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-09-25T07:02:33.487677Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-09-25T07:02:33.486915Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2024-09-25T07:02:24.956574Z&quot;}" data-execution_count="58">
-<div class="sourceCode cell-code" id="cb66"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb66-1"><a href=""></a><span class="im">from</span> outlines <span class="im">import</span> generate, models</span>
-<span id="cb66-2"><a href=""></a>model <span class="op">=</span> models.LlamaCpp(llm)</span>
-<span id="cb66-3"><a href=""></a>generator <span class="op">=</span> generate.json(model, KnowledgeGraph)</span>
-<span id="cb66-4"><a href=""></a>prompt <span class="op">=</span> generate_hermes_prompt(curie_text)</span>
-<span id="cb66-5"><a href=""></a>response <span class="op">=</span> generator(prompt, max_tokens<span class="op">=</span><span class="dv">1024</span>, temperature<span class="op">=</span><span class="dv">0</span>, seed<span class="op">=</span><span class="dv">42</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb67"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb67-1"><a href=""></a><span class="im">from</span> outlines <span class="im">import</span> generate, models</span>
+<span id="cb67-2"><a href=""></a>model <span class="op">=</span> models.LlamaCpp(llm)</span>
+<span id="cb67-3"><a href=""></a>generator <span class="op">=</span> generate.json(model, KnowledgeGraph)</span>
+<span id="cb67-4"><a href=""></a>prompt <span class="op">=</span> generate_hermes_prompt(curie_text)</span>
+<span id="cb67-5"><a href=""></a>response <span class="op">=</span> generator(prompt, max_tokens<span class="op">=</span><span class="dv">1024</span>, temperature<span class="op">=</span><span class="dv">0</span>, seed<span class="op">=</span><span class="dv">42</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div id="dc1be9ec-db03-4af3-8257-316eeb14eeb1" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-09-25T07:02:34.149741Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-09-25T07:02:34.149155Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-09-25T07:02:34.158924Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-09-25T07:02:34.157643Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2024-09-25T07:02:34.149688Z&quot;}" data-execution_count="59">
 <div class="cell-output cell-output-display" data-execution_count="59">
@@ -1892,18 +2001,18 @@ This one, in chemistry, was for the discovery of polonium and radium. In her acc
 <section id="knowledge-graph-construction-9" class="slide level2">
 <h2>Knowledge graph construction</h2>
 <div id="e517cf8a-2fa3-40e2-9698-19d2bf06590d" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-09-25T07:03:05.633951Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-09-25T07:03:05.633388Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-09-25T07:03:05.744451Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-09-25T07:03:05.743121Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2024-09-25T07:03:05.633897Z&quot;}" data-execution_count="61">
-<div class="sourceCode cell-code" id="cb69"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb69-1"><a href=""></a><span class="im">from</span> graphviz <span class="im">import</span> Digraph</span>
-<span id="cb69-2"><a href=""></a></span>
-<span id="cb69-3"><a href=""></a>dot <span class="op">=</span> Digraph()</span>
-<span id="cb69-4"><a href=""></a><span class="cf">for</span> node <span class="kw">in</span> response.nodes:</span>
-<span id="cb69-5"><a href=""></a>    dot.node(<span class="bu">str</span>(node.<span class="bu">id</span>), node.label, shape<span class="op">=</span><span class="st">'circle'</span>, width<span class="op">=</span><span class="st">'1'</span>, height<span class="op">=</span><span class="st">'1'</span>)</span>
-<span id="cb69-6"><a href=""></a><span class="cf">for</span> edge <span class="kw">in</span> response.edges:</span>
-<span id="cb69-7"><a href=""></a>    dot.edge(<span class="bu">str</span>(edge.source), <span class="bu">str</span>(edge.target), label<span class="op">=</span>edge.label.upper())</span>
-<span id="cb69-8"><a href=""></a></span>
-<span id="cb69-9"><a href=""></a>dot</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb70"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb70-1"><a href=""></a><span class="im">from</span> graphviz <span class="im">import</span> Digraph</span>
+<span id="cb70-2"><a href=""></a></span>
+<span id="cb70-3"><a href=""></a>dot <span class="op">=</span> Digraph()</span>
+<span id="cb70-4"><a href=""></a><span class="cf">for</span> node <span class="kw">in</span> response.nodes:</span>
+<span id="cb70-5"><a href=""></a>    dot.node(<span class="bu">str</span>(node.<span class="bu">id</span>), node.label, shape<span class="op">=</span><span class="st">'circle'</span>, width<span class="op">=</span><span class="st">'1'</span>, height<span class="op">=</span><span class="st">'1'</span>)</span>
+<span id="cb70-6"><a href=""></a><span class="cf">for</span> edge <span class="kw">in</span> response.edges:</span>
+<span id="cb70-7"><a href=""></a>    dot.edge(<span class="bu">str</span>(edge.source), <span class="bu">str</span>(edge.target), label<span class="op">=</span>edge.label.upper())</span>
+<span id="cb70-8"><a href=""></a></span>
+<span id="cb70-9"><a href=""></a>dot</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="PyData-Paris_files/figure-revealjs/cell-62-output-1.svg" class="r-stretch"></section></section>
+<img data-src="PyData-Paris_files/figure-revealjs/cell-63-output-1.svg" class="r-stretch"></section></section>
 <section>
 <section id="conclusions" class="title-slide slide level1 center">
 <h1>Conclusions</h1>
